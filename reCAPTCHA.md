@@ -8,3 +8,4 @@ Technical Program Manager
 Fitbit, Inc. | Boston, MA
 kate.roberts@fitbit.com
 ##
+* Scott Paxton and Curt Ege implemented reCAPTCHA for the commerce team
