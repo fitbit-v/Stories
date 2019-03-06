@@ -1,0 +1,48 @@
+Grax - Salesforce plugin
+* architecture and security
+* prod org is moving to S3
+* 3rd party archiving - storing and not as much accessing
+* Salesforce object sizes
+* CS15513 - Keith and Greg
+* protect secrets and credentials
+* CS Tools Scrum - data for this sprint
+* SFDC-4625, 4532, 3886, 4571, 4578
+* CS-14915
+* Rules engine
+* look at open cases in Salesforce Help
+* CS Tools
+* Fitbit Protectin Plan, Tiered Support, Trade-in Program - Aegis?
+* Fitbit Health Solutions - health alliances with insurance and payers
+* United Healthcare motion program
+* Agent experience needs to move to lightning
+* Cypress MCU
+* 15% of 3000 replacements are fraud related
+* help.fitbit.com - Salesforce site on force.com - 4 Mil views
+* community.fitbit.com - built on Lithium - 2.7 Mil views
+Grax - Salesforce plugin
+* attachments object - soql query
+* lightning object
+* visualforce access metrics - which pages I am using
+* LE configuration converter
+#### Tech Stack
+[Salesforce Sites](https://help.salesforce.com/articleView?id=sites_overview.htm&type=5)
+[Site.com](https://help.salesforce.com/articleView?id=siteforce_overview.htm&type=5)
+* HelpSite - force.com site
+* 
+
+
+## Lightning Migration
+* attachments object - soql query
+* lightning object
+* visualforce access metrics - which pages I am using
+* LE configuration converter
+
+## Amazon S3 Storage Classes
+[Monthly Calculator](https://calculator.s3.amazonaws.com/index.html)
+* [Amazon S3 Storage Classes](https://aws.amazon.com/s3/storage-classes/)
+* `S3 Standard` for general-purpose storage of frequently accessed data; 
+* `S3 Intelligent-Tiering` for data with unknown or changing access patterns; 
+* `S3 Standard-Infrequent Access` (S3 Standard-IA) and 
+* `S3 One Zone-Infrequent Access` (S3 One Zone-IA) for long-lived, but less frequently accessed data; and 
+* `Amazon S3 Glacier (S3 Glacier)` and 
+* `Amazon S3 Glacier Deep Archive` (S3 Glacier Deep Archive) for long-term archive and digital preservation. Amazon S3 also offers capabilities to manage your data throughout its lifecycle. Once an S3 Lifecycle policy is set, your data will automatically transfer to a different storage class without any changes to your application.  
