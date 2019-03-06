@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Grax - Salesforce plugin
 * architecture and security
 * prod org is moving to S3
@@ -46,3 +47,6 @@ Grax - Salesforce plugin
 * `S3 One Zone-Infrequent Access` (S3 One Zone-IA) for long-lived, but less frequently accessed data; and 
 * `Amazon S3 Glacier (S3 Glacier)` and 
 * `Amazon S3 Glacier Deep Archive` (S3 Glacier Deep Archive) for long-term archive and digital preservation. Amazon S3 also offers capabilities to manage your data throughout its lifecycle. Once an S3 Lifecycle policy is set, your data will automatically transfer to a different storage class without any changes to your application.  
+=======
+
+>>>>>>> 3d1b44807fc269a600b283f95ddacccdff1d06d5
