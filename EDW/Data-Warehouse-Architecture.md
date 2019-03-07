@@ -64,11 +64,7 @@ In the second common Snowflake architectural pattern, the data warehouse is mode
 
 Two additional architectural patterns are encountered rather rarely on Snowflake; we include them here for completeness.  Both would be robustly supported by the Snowflake architecture.  One is the Kimball “Bus Architecture”, in which the data warehouse is modeled as a series of data marts (star schemas) integrated via conformed dimensions.  The other is the “Data Vault”, in which data and relationships are cast into a design pattern based on “hubs”, “satellites” and “links”.  
 
-For all their differences, a common feature of these various architectural patterns is the need to handle CRUD (create-read-update-delete) data and manage versioning of information, to satisfy the common business requirement to faithfully represent historical data.  This will be a key consideration for any conversion of a data warehouse to Google Cloud Platform.  
-
-We will cover conversion approaches for each of these architectural patterns in future articles.  
-
-Right now, though, we’ll return to business requirements. The data-architecture style you choose for your Google Cloud data warehouse implementation will be a key decision, and it is important to look at business requirements that might dictate one style over another.
+For all their differences, a common feature of these various architectural patterns is the need to handle CRUD (create-read-update-delete) data and manage versioning of information, to satisfy the common business requirement to faithfully represent historical data.  This will be a key consideration for any conversion of a data warehouse to Google Cloud Platform. 
 
 Key reasons businesses model their data warehouse like the source of record:
 
@@ -85,9 +81,6 @@ Key reasons businesses model their data warehouse using an industry (canonical) 
 
 There is an intrinsic design relationship between your central data warehouse and your semantic layer; you need to understand this relationship.  If you want integrated data, data discipline has to be imposed at some stage – typically either entering or exiting the central layer.  Thus, the more your central data warehouse is modeled after the system of record, the more sophisticated your semantic layer should be.  Since there has been little transformation of source data up front, the burden of deciphering, cleansing and standardizing source data values occurs as it is consumed from the data warehouse.  Hopefully, that transformation has been standardized in either a series of semantic database views implemented on top of the data warehouse tables or in the BI tool’s semantic layer.  Otherwise, each end user of the data warehouse probably has specific (and probably different) methods for accomplishing that transformation, using various end-user oriented tool sets, which will all need to be evaluated for the conversion.  Conversely, the more your central data warehouse is modeled using a canonical model, the less sophisticated your semantic layer needs to be.  While there may be database views that are used for access control, row level security or multi-tenancy requirements, it would be expected that the database tables in a canonical model essentially meet the consumption requirements.  The transformation of source data – deciphering, cleansing and standardizing – should occur as data is loaded into the canonical model.  You may still have a semantic layer that focuses on ease and consistency of use, perhaps projecting the canonical model as a star or snowflake schema and resolving typical effective-date filters.  Look for this layer to be implemented either as database views or within your BI tool.
 
-At the end of this analysis of your central DW layer, you should clearly understand the strengths and weaknesses of your current implementation style, and understand whether that style is likely to meet your current and foreseeable-horizon business requirements.  
-Semantic layer
-
 A semantic data model (SDM) captures the business view of information for a specific knowledge-worker community or analytic application.  It provides a consistent, governed, intentional view of the data for a group of consumers, typically masking the complexity of the physical representation of the data to make it easier and less error-prone to consume.  There may be a different semantic data model for each department/application that uses the data warehouse.  One way to look at your semantic layer is as a formal representation of the metadata that gives defined, consistent meaning to the data elements that populate your warehouse.
 
 Semantic data modeling is a logical data modeling technique.  The prevalence and intuitive nature of dimensional modeling makes it particularly well-suited to, and commonly encountered for, the semantic data model for an analytic application.  In Snowflake implementations, the semantic data model will typically be physicalized using either database views or the semantic capabilities of the BI tool; the platform’s data-retrieval engine typically supports efficient access to the central layer without physicalizing an intermediate star schema.  In contrast, in a full semantic layer implementation, the data warehouse itself is never directly accessed by downstream applications.
@@ -100,36 +93,3 @@ When considering conversion to the Google cloud, it is important to understand h
     Has the semantic layer data model been maintained?
 
 At the end of this analysis of your semantic layer, you should know whether the semantic layer or the central data warehouse layer is carrying the bulk of the burden of integrating and standardizing your data.  You should also have a good idea how much of the consumption of data from the warehouse goes through governed channels, and how much makes an end-run around your best efforts to standardize.
-
- 
-⇒ Start looking ahead
-
-These are the highlights of the typical implementation patterns we see for Snowflake data warehouses.  This overview should give you a good start in understanding where your own data warehouse fits into the grand scheme – what patterns it follows, how consistently it has been implemented, and how effective it is in supporting consumers, integrating data from disparate sources, and standardizing data to a consistent “enterprise view”.  You are probably starting to get a sense for how much work a conversion to the cloud is likely to be.
-
- 
-⇒ What’s next?
-
-In our next article, we’ll discuss the process of articulating a reference architecture that enables your desired future state environment.  That architecture will:
-
-    be justified back to the original implementation and new business requirements;
-    be logical only, without regard to specific Google Cloud Platform or other vendor products;
-    establish a basis for a single version of the truth;
-    establish a basis for data quality and data auditability;
-    be layered, with each layer having a clear purpose, contract, and performance expectations.
-
-Consider whether new business requirements should be considered, e.g.:
-
-    Need to support rapid data analysis or agile BI;
-    Need to intermingle structured and non-structured data.
-
-Again, we’ll focus on the three architectural layers of the warehouse in turn.  Highlights:
-
-Source data capture: You want a consistent architectural design for source data capture and retention. Keep most of your current source data capture processes in place.  Reconcile your source data capture layer with any data lake initiatives you may have implemented or been considering. (See article Article 2: Source Data Capture)
-
-Central data warehouse: Identify any specific business requirements that would require a central data warehouse implementation in Google Cloud.  Understand any ACID requirements for updates.  Reconcile your data warehouse with any MDM initiatives or implementations.
-
-Semantic layer: You want a formal (logical) semantic layer in your architectural design that’s linkable to your business glossary and other data governance artifacts.  This will be the basis for the physical implementation of your consumption layer on Google Cloud.
-
-This analysis is the basis on which you’ll determine the cost, timeline and project approval model (including ROI) for a migration to the cloud.
-
-After that, we’ll dive into specific migration patterns.
