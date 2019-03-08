@@ -29,4 +29,3 @@ I spun up a quick instance of Amazon Workspaces, a useful remote desktop solutio
 * [Thoughts on reCAPTCHA v3](https://medium.com/@jsoverson/thoughts-on-recaptcha-v3-e837d4a0a63)
 * [Bypassing CAPTCHAs with Headless Chrome](https://medium.com/@jsoverson/bypassing-captchas-with-headless-chrome-93f294518337)
 * [How To Style for Google reCAPTCHA (Change Position, Resize reCAPTCHA Badge)](https://medium.com/@ohiwill/how-to-style-for-google-recaptcha-change-position-resize-recaptcha-badge-bc1c1b4fbd6d)
-* 
