@@ -1,7 +1,12 @@
 # reCAPTCHA V3
 [reCAPTCHA demo](https://recaptcha-demo.appspot.com/)
 vukdukic-unql@force.com
-
+ 
+Given the changes and the coexistence with V2, V3 seems like a new product rather than a new version of reCAPTCHA.  Google docs state that V3 is more suitable for situations where showing a challenge is not desired and claims that V2 will not be going away.  At the same time, V2 is far from a perfect anti-spam and bot prevention solution.  V3 is still to be proven as a tool.  In my opinion, using V3 will require rearchitecting of applications.
+ 
+With V3, Google is no longer claiming that it is differentiating between human and non-human traffic, it is delivering a risk score and the consumer now needs to figure out what to do with it.  Also, as you know, the score varies across browsers and devices.  I had a chance to test the code on multiple browsers and devices and confirm this.  Two of the data points that Google looks at when assessing legitimacy is IP and ASN (Autonomous System Number) reputation. 
+ 
+I feel that it will be worth exploring other solutions for bot detection and prevention.  I am looking at other tools and exploring architecture where v2 and v3 are coexisting in applications. 
 
 ## Reverse Turing test and CAPTCHA
 
@@ -48,6 +53,8 @@ reCAPTCHA v3 is intended for power users, site owners that want more data about 
 
 For example, a registration page might still use reCAPTCHA v2 for a higher-friction challenge, whereas more common actions like sign-in, searches, comments, or voting might use reCAPTCHA v3.
 
+it seems tied to cookies and tracking scripts. Clearing cookies and setting the browser to not accept third-party cookies seems to lock it to 0.1. Try logging into gmail in the browser, and visiting a few other sites, some people have reported success with soundcloud. Also, if you solve a legacy captcha (v1) it seems to lock you to 0.1 for a few minutes. It also strongly prefers google chrome and firefox, chromium forks such as ungoogled-chromium and brave seem to hover around the 0.1 to 0.3 range, and edge rarely gets above 0.5.
+
 ## Features
 
     High Test coverage, safe and easy to use
@@ -59,3 +66,31 @@ For example, a registration page might still use reCAPTCHA v2 for a higher-frict
     Support custom implementation on request method interface
     Fully supported Vue component
     IP skip list supported
+
+## Browser Fingerprinting
+A device fingerprint, machine fingerprint or browser fingerprint is information collected about a remote computing device for the purpose of identification. Fingerprints can be used to fully or partially identify individual users or devices even when cookies are turned off.
+
+Browser fingerprinting is a powerful method that websites use to collect information about your browser type and version, as well as your operating system, active plugins, timezone, language, screen resolution and various other active settings.
+
+Websites bulk-collect a large set of data of visitors in order to later use it to match against browser fingerprints of known users.
+
+Browser fingerprinting is also used to identify the characteristics of botnets, because the connections of botnets are established by a different device every time.
+### Canvas Fingerprinting
+Within the HTML5, originally <canvas> element was used to draw graphics on a web page.
+
+When a user visits a page, the fingerprinting script first draws text with the font and size of its choice and adds background colors. Next, the script calls Canvas API’s ToDataURL method to get the canvas pixel data in dataURL format, which is basically a Base64 encoded representation of the binary pixel data. Finally, the script takes the hash of the text-encoded pixel data, which serves as the fingerprint.  This information serves as the unique fingerprint of every visitor. 
+
+In contrast to how cookies work, canvas fingerprinting doesn’t load anything onto your computer, so you won’t be able to delete any data, since it’s not stored on your computer or device, but elsewhere. 
+
+rack what other websites you visit, the account you’re logged into and sometimes even your geo-location. 
+
+ReCaptcha v3 will not present a captcha anymore, but rely on browser fingerprinting and other information google can get about you.
+
+VPN IPs or static company IPs seem to be blacklisted and only get a score of 0.1 even when the browser profile itself is fresh and has no adblocker and other privacy tools installed. Using a mobile internet connection, I get up to 0.7.
+
+Logging into a Google account improves the score
+
+
+
+
+
