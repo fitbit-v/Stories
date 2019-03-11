@@ -1,5 +1,8 @@
 # reCAPTCHA V3
-[reCAPTCHA demo](https://recaptcha-demo.appspot.com/)
+* [reCAPTCHA demo](https://recaptcha-demo.appspot.com/)
+* [Am I Unique](https://amiunique.org/)
+* [Jira - Card testing through Commerce API](https://jira.fitbit.com/browse/SEC-20004)
+#
 vukdukic-unql@force.com
  
 Given the changes and the coexistence with V2, V3 seems like a new product rather than a new version of reCAPTCHA.  Google docs state that V3 is more suitable for situations where showing a challenge is not desired and claims that V2 will not be going away.  At the same time, V2 is far from a perfect anti-spam and bot prevention solution.  V3 is still to be proven as a tool.  In my opinion, using V3 will require rearchitecting of applications.
