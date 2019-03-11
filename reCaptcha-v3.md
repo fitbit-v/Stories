@@ -26,7 +26,9 @@ Google recommends adding reCAPTCHA v3 to multiple pages. This way, the reCAPTCHA
 
 CloudFlare hasn't created a free JS script to do a captcha and collect attack data.
 
+'Human Mouse Move' Function is the most important Point. Google detects inside the captcha `Mousespeed`, `MouseWay`, `MouseButton` down and up Events, Clickpositions, Mouse EntryPoint into the captcha, ... and send this informations via Javascript to Google Database with many millions of real Human Mousemove Trackings. After interpreting all this captured Informations the Captcha will marked als solved, only if the google algorithm says it was a human.
 
+Google developed an Advanced Risk Analysis backend for reCAPTCHA that actively considers a user’s entire engagement with the CAPTCHA—before, during, and after—to determine whether that user is a human. 
 
 ## Reverse Turing test and CAPTCHA
 
@@ -115,3 +117,20 @@ Create an extra field in a form and make it invisible to the user with CSS or Ja
 
 
 
+* own the security approach
+* how to keep safe the accounts in SFDC
+* how are we managing Fitbit's identities
+* how do we know we are hacked
+* how do know identities are passed
+* how sso for android is working - and get it fixed
+* on ios it is not working
+* how are we storing account information in Saleforce, we copy fitbit token to Salesforce
+* Subaru's team is in their
+* what happens when we merged contacts with the fitbit ids
+* ids are stored in the intersection object between contacts and community
+* YGO Claims and Community Users
+* move PKB from help.com to myHelp.com
+* check on what has been done so far on this 
+* have to be off of the site platform at the end of May
+* forms need to be running on myhelp
+* move all of the chat to an authenticated site
