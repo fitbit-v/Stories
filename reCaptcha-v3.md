@@ -3,6 +3,8 @@
 * [Am I Unique](https://amiunique.org/)
 * [Jira - Card testing through Commerce API](https://jira.fitbit.com/browse/SEC-20004)
 * [Introducing reCAPTCHA v3: the new way to stop bots ](https://webmasters.googleblog.com/2018/10/introducing-recaptcha-v3-new-way-to.html)
+* [Thoughts on reCAPTCHA v3](https://medium.com/@jsoverson/thoughts-on-recaptcha-v3-e837d4a0a63)
+* [Reddit Article](https://www.reddit.com/r/webdev/comments/9sndkv/google_launches_recaptcha_v3/)
 #
 vukdukic-unql@force.com
  
