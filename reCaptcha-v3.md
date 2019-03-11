@@ -96,7 +96,7 @@ Websites bulk-collect a large set of data of visitors in order to later use it t
 
 Browser fingerprinting is also used to identify the characteristics of botnets, because the connections of botnets are established by a different device every time.
 ### Canvas Fingerprinting
-Within the HTML5, originally canvas element was used to draw graphics on a web page.
+Within the HTML5, originally `canvas` element was used to draw graphics on a web page.
 
 When a user visits a page, the fingerprinting script first draws text with the font and size of its choice and adds background colors. Next, the script calls Canvas API’s ToDataURL method to get the canvas pixel data in dataURL format, which is basically a Base64 encoded representation of the binary pixel data. Finally, the script takes the hash of the text-encoded pixel data, which serves as the fingerprint.  This information serves as the unique fingerprint of every visitor. 
 
