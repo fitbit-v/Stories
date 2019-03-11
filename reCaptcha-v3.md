@@ -48,7 +48,7 @@ reCAPTCHA v3 is intended for power users, site owners that want more data about 
 
 For example, a registration page might still use reCAPTCHA v2 for a higher-friction challenge, whereas more common actions like sign-in, searches, comments, or voting might use reCAPTCHA v3.
 
-Features
+## Features
 
     High Test coverage, safe and easy to use
     Score Comparision
