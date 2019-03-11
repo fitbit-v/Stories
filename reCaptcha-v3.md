@@ -1,3 +1,17 @@
+# reCAPTCHA V3
+[reCAPTCHA demo](https://recaptcha-demo.appspot.com/)
+vukdukic-unql@force.com
+
+
+## Reverse Turing test and CAPTCHA
+
+A modification of the Turing test wherein the objective of one or more of the roles have been reversed between machines and humans is termed a reverse Turing test. 
+
+CAPTCHA is a form of reverse Turing test. Before being allowed to perform some action on a website, the user is presented with alphanumerical characters in a distorted graphic image and asked to type them out. This is intended to prevent automated systems from being used to abuse the site. The rationale is that software sufficiently sophisticated to read and reproduce the distorted image accurately does not exist (or is not available to the average user), so any system able to do so is likely to be a human.
+
+Software that could reverse CAPTCHA with some accuracy by analysing patterns in the generating engine started being developed soon after the creation of CAPTCHA. In 2013, researchers at Vicarious announced that they had developed a system to solve CAPTCHA challenges from Google, Yahoo!, and PayPal up to 90% of the time. In 2014, Google engineers demonstrated a system that could defeat CAPTCHA challenges with 99.8% accuracy. In 2015, Shuman Ghosemajumder, former click fraud czar of Google, stated that there were cybercriminal sites that would defeat CAPTCHA challenges for a fee, to enable various forms of fraud.
+
+##
 * reCAPTCHA learns by seeing real traffic on your site.  For this reason, scores in a staging environment or soon after implementing may differ from prod.  
 * first run reCAPTCHA without tracking action and then decide on tresholds by looking at your traffic in the admin console.
 * by default, you can use a treshold of 0.5
@@ -22,3 +36,5 @@
   "error-codes": []
 }
 ```
+
+Google generates a token for the client when he passes the checks which you have to validate on the serverside. If someone doesn't pass the captcha (a robot), he doesnt have the token.

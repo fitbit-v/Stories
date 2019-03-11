@@ -93,3 +93,29 @@ When considering conversion to the Google cloud, it is important to understand h
     Has the semantic layer data model been maintained?
 
 At the end of this analysis of your semantic layer, you should know whether the semantic layer or the central data warehouse layer is carrying the bulk of the burden of integrating and standardizing your data.  You should also have a good idea how much of the consumption of data from the warehouse goes through governed channels, and how much makes an end-run around your best efforts to standardize.
+
+##
+Three types of source capture processes:
+* pull
+* push 
+* stream
+
+#
+Implementation strategies for landing the data into the data warehouse for each type of process?
+
+* We recommended conversion rather than re-implementation of your current source data capture processes as a very important aid to facilitate side-by-side validation of your converted data warehouse. 
+
+* creation of a unified landing model, as an architectural component we called the “Landing Zone”
+## Implementation of the Enterprise Landing Zone
+Creation of a unified landing model, as an architectural component called the “Landing Zone”
+* expense reduction/capital spend avoidance ROI model
+* cost of the conversion must be constrained to fit within this cost reduction model
+* forms of staging (flat files, relational tables or XML formats) 
+### Nuances of landing data
+* All relational databases enforce data integrity through the use of pre-defined schemas and data definitions that include type, length, and nullability. 
+
+* ETL (Informatica PowerCenter) – Generates a flat file store (BAD files) of any source records rejected by the target.  
+* Teradata Utilities – Populate error tables if any source records are rejected because of source format, data conversion, or constraint violations.
+* Knowing which source capture processes rely on the data integrity provided by the relational database is needed to best understand which Google Cloud Platform product can supply similar capabilities.
+#### Checklist for evaluating your source data capture processes
+
