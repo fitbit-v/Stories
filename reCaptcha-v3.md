@@ -38,3 +38,24 @@ Software that could reverse CAPTCHA with some accuracy by analysing patterns in 
 ```
 
 Google generates a token for the client when he passes the checks which you have to validate on the serverside. If someone doesn't pass the captcha (a robot), he doesnt have the token.
+
+The previous ReCaptcha (v2) worked because it tracked the user movement (scrolling, clicking) while the user solved the captcha (clicked on "I'm not a robot"). As far as i understand v3 does the same, but there is just no button to click on, google just "watches" the client and determines wether there is a human controlling the mouse etc. on the other side.
+
+* create a composer package which supports score settings
+* do score comparison for your own score handler
+
+reCAPTCHA v3 is intended for power users, site owners that want more data about their traffic, and for use cases in which it is not appropriate to show a challenge to the user.
+
+For example, a registration page might still use reCAPTCHA v2 for a higher-friction challenge, whereas more common actions like sign-in, searches, comments, or voting might use reCAPTCHA v3.
+
+Features
+
+    High Test coverage, safe and easy to use
+    Score Comparision
+    Support invisible, corner and inline badge style
+    Support reCAPTCHA to run on every page
+    Support multiple actions to be placed on the same page
+    Support custom implementation on config interface
+    Support custom implementation on request method interface
+    Fully supported Vue component
+    IP skip list supported
