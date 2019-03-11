@@ -2,6 +2,7 @@
 * [reCAPTCHA demo](https://recaptcha-demo.appspot.com/)
 * [Am I Unique](https://amiunique.org/)
 * [Jira - Card testing through Commerce API](https://jira.fitbit.com/browse/SEC-20004)
+* [Introducing reCAPTCHA v3: the new way to stop bots ](https://webmasters.googleblog.com/2018/10/introducing-recaptcha-v3-new-way-to.html)
 #
 vukdukic-unql@force.com
  
@@ -10,6 +11,20 @@ Given the changes and the coexistence with V2, V3 seems like a new product rathe
 With V3, Google is no longer claiming that it is differentiating between human and non-human traffic, it is delivering a risk score and the consumer now needs to figure out what to do with it.  Also, as you know, the score varies across browsers and devices.  I had a chance to test the code on multiple browsers and devices and confirm this.  Two of the data points that Google looks at when assessing legitimacy is IP and ASN (Autonomous System Number) reputation. 
  
 I feel that it will be worth exploring other solutions for bot detection and prevention.  I am looking at other tools and exploring architecture where v2 and v3 are coexisting in applications. 
+
+Since reCAPTCHA v3 doesn't interrupt users, we recommend adding reCAPTCHA v3 to multiple pages. In this way, the reCAPTCHA adaptive risk analysis engine can identify the pattern of attackers more accurately by looking at the activities across different pages on your website.
+
+reCAPTCHA works best if it can build a profile for each visitor and the more information it can gather from different sources about them the better it can function. They use a third party cookie for that to work across multiple websites which also helps them tune their core business to detect and prevent ad fraud bots.
+
+Google is to create a risk assessment profile based on the user footprint to determine if they are likely to be a bot.  This likely means that anyone who takes steps to protect the anonymity online will likely be identified as a bot.
+
+Google tracks almost everything you do through Analytics, AdSense and reCAPTCHA.
+
+Google recommends adding reCAPTCHA v3 to multiple pages. This way, the reCAPTCHA adaptive risk analysis engine can identify the pattern of attackers more accurately by looking at the activities across different pages on the website.
+
+CloudFlare hasn't created a free JS script to do a captcha and collect attack data.
+
+
 
 ## Reverse Turing test and CAPTCHA
 
@@ -93,7 +108,8 @@ VPN IPs or static company IPs seem to be blacklisted and only get a score of 0.1
 
 Logging into a Google account improves the score
 
-
+## Honeypot Method
+Create an extra field in a form and make it invisible to the user with CSS or JavaScript. Bots will detect the field and fill it out, whereas organic users will not, so if the field’s not empty, reject the form. 
 
 
 
