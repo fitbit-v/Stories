@@ -5,6 +5,8 @@
 * [Introducing reCAPTCHA v3: the new way to stop bots ](https://webmasters.googleblog.com/2018/10/introducing-recaptcha-v3-new-way-to.html)
 * [Thoughts on reCAPTCHA v3](https://medium.com/@jsoverson/thoughts-on-recaptcha-v3-e837d4a0a63)
 * [Reddit Article](https://www.reddit.com/r/webdev/comments/9sndkv/google_launches_recaptcha_v3/)
+* [RIP CAPTCHA? Why You Might Not Need It (And What to Do Instead)](https://www.gravityforms.com/rip-captcha/)
+* [hCaptcha Developer Guide](https://hcaptcha.com/docs)
 #
 vukdukic-unql@force.com
  

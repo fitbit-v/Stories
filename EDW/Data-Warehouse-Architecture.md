@@ -1,3 +1,5 @@
+* [Source Data Capture](https://www.myersholum.com/article-2-source-data-capture/)
+
 Modern cloud infrastructure offers a compelling opportunity to reimagine demanding data applications.  Large data warehouses, long constrained by prior technology, can be good candidates for migration to the cloud.  Google Cloud Platform offers a suite of fully-managed, elastically-scalable database services suitable for re-platforming large data warehouses for enhanced performance at reduced cost and complexity.
 
 Google Cloud Platform supports several SQL-capable data services: Cloud SQL, Cloud Spanner, and BigQuery, each of which offers capabilities relevant to a data warehousing environment.  BigQuery in particular can be very fast at remarkable scale, though it has architectural features that differ significantly from a conventional RDBMS platform.  
