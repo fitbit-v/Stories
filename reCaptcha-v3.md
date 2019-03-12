@@ -121,7 +121,7 @@ Create an extra field in a form and make it invisible to the user with CSS or Ja
 * how to keep safe the accounts in SFDC
 * how are we managing Fitbit's identities
 * how do we know we are hacked
-* how do know identities are passed
+* how do we know identities are passed
 * how sso for android is working - and get it fixed
 * on ios it is not working
 * how are we storing account information in Saleforce, we copy fitbit token to Salesforce
