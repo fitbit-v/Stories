@@ -7,6 +7,7 @@
 * [Reddit Article](https://www.reddit.com/r/webdev/comments/9sndkv/google_launches_recaptcha_v3/)
 * [RIP CAPTCHA? Why You Might Not Need It (And What to Do Instead)](https://www.gravityforms.com/rip-captcha/)
 * [hCaptcha Developer Guide](https://hcaptcha.com/docs)
+* [PerimeterX](https://www.salesforce.com/products/commerce-cloud/partner-marketplace/partners/perimeterx/)
 #
 vukdukic-unql@force.com
  
