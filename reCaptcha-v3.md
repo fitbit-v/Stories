@@ -11,6 +11,7 @@
 * [RIP CAPTCHA? Why You Might Not Need It (And What to Do Instead)](https://www.gravityforms.com/rip-captcha/)
 * [hCaptcha Developer Guide](https://hcaptcha.com/docs)
 * [PerimeterX](https://www.salesforce.com/products/commerce-cloud/partner-marketplace/partners/perimeterx/)
+* [The definitive guide to form-based website authentication](https://stackoverflow.com/questions/549/the-definitive-guide-to-form-based-website-authentication/477578#477578)
 #
 vukdukic-unql@force.com
  
@@ -85,15 +86,15 @@ it seems tied to cookies and tracking scripts. Clearing cookies and setting the 
 
 ## Features
 
-    High Test coverage, safe and easy to use
-    Score Comparision
-    Support invisible, corner and inline badge style
-    Support reCAPTCHA to run on every page
-    Support multiple actions to be placed on the same page
-    Support custom implementation on config interface
-    Support custom implementation on request method interface
-    Fully supported Vue component
-    IP skip list supported
+* High Test coverage, safe and easy to use
+* Score Comparision
+* Support invisible, corner and inline badge style
+* Support reCAPTCHA to run on every page
+* Support multiple actions to be placed on the same page
+* Support custom implementation on config interface
+* Support custom implementation on request method interface
+* Fully supported Vue component
+* IP skip list supported
 
 ## Browser Fingerprinting
 A device fingerprint, machine fingerprint or browser fingerprint is information collected about a remote computing device for the purpose of identification. Fingerprints can be used to fully or partially identify individual users or devices even when cookies are turned off.
