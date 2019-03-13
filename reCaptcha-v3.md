@@ -1,4 +1,7 @@
 # reCAPTCHA V3
+### Jira
+* [Implement reCAPTCHA3 on Claim Flow](https://jira.fitbit.com/browse/SFDC-3720)
+### Links
 * [reCAPTCHA demo](https://recaptcha-demo.appspot.com/)
 * [Am I Unique](https://amiunique.org/)
 * [Jira - Card testing through Commerce API](https://jira.fitbit.com/browse/SEC-20004)
@@ -124,7 +127,7 @@ Create an extra field in a form and make it invisible to the user with CSS or Ja
 * how are we managing Fitbit's identities
 * how do we know we are hacked
 * how do we know identities are passed
-* how sso for android is working - and get it fixed
+* `how sso for android is working - and get it fixed`
 * on ios it is not working
 * how are we storing account information in Saleforce, we copy fitbit token to Salesforce
 * Subaru's team is in their
