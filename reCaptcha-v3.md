@@ -121,23 +121,3 @@ Logging into a Google account improves the score
 
 ## Honeypot Method
 Create an extra field in a form and make it invisible to the user with CSS or JavaScript. Bots will detect the field and fill it out, whereas organic users will not, so if the field’s not empty, reject the form. 
-
-
-
-* own the security approach
-* how to keep safe the accounts in SFDC
-* how are we managing Fitbit's identities
-* how do we know we are hacked
-* how do we know identities are passed
-* `how sso for android is working - and get it fixed`
-* on ios it is not working
-* how are we storing account information in Saleforce, we copy fitbit token to Salesforce
-* Subaru's team is in their
-* what happens when we merged contacts with the fitbit ids
-* ids are stored in the intersection object between contacts and community
-* YGO Claims and Community Users
-* move PKB from help.com to myHelp.com
-* check on what has been done so far on this 
-* have to be off of the site platform at the end of May
-* forms need to be running on myhelp
-* move all of the chat to an authenticated site
