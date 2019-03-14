@@ -1,4 +1,5 @@
 * [Source Data Capture](https://www.myersholum.com/article-2-source-data-capture/)
+* [System Design Cheatsheet](https://gist.github.com/VukDukic/d2baaf7504c8949c0f6c56b181cde21e)
 
 Modern cloud infrastructure offers a compelling opportunity to reimagine demanding data applications.  Large data warehouses, long constrained by prior technology, can be good candidates for migration to the cloud.  Google Cloud Platform offers a suite of fully-managed, elastically-scalable database services suitable for re-platforming large data warehouses for enhanced performance at reduced cost and complexity.
 
