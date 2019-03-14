@@ -1,5 +1,6 @@
 # SSO
-* 
+* [Authenticated Site Configuration](https://jira.fitbit.com/browse/SFDC-2672?jql=ORDER%20BY%20lastViewed%20DESC)
+* [Sync Doctor UX Specification V0 - Confluence Page](https://wiki.fitbit.com/pages/viewpage.action?spaceKey=~Akumar&title=Sync+Doctor+UX+Specification+-+V0)
 
 So basically we have a myhelp community page that is incorporated in the Mobile app and that myhelp community is behind the accounts.fitbit.com portal. This portal sense the fitbit.com session, if there an active fitbit.com session then it directly takes us this community page and if there is no active fitbit.com session then it asks for the login. 
 
