@@ -13,3 +13,10 @@ Customer channels: phone, email, live chat, messaging apps, video chat, communit
 
 ## LiveMessage
 * LiveMessage, agents can connect with customers using SMS or Facebook Messenger
+
+## Skills-Based Routing
+Skills-based routing uses Apex action classes to assign skills, priority, and the routing model to work items.
+When Omni-Channel receves a new work item, it looks at the required skills, the work’s priority, and the routing model (Least Active or Most Available) to determine how to route the work.
+### Set Up Skills-Based Routing
+#### 1. Identify Which Skills Agents Need
+To set up skills-based routing, you need a list of the skills that agents must have to resolve different work items.
