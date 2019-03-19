@@ -20,3 +20,4 @@ When Omni-Channel receves a new work item, it looks at the required skills, the 
 ### Set Up Skills-Based Routing
 #### 1. Identify Which Skills Agents Need
 To set up skills-based routing, you need a list of the skills that agents must have to resolve different work items.
+Skills-based routing uses Apex action classes to assign skills, priority, and the routing model to work items. You create an Apex action class and then create a workflow that calls the Apex class.
