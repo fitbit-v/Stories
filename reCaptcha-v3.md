@@ -1,4 +1,5 @@
 # reCAPTCHA V3
+* [FitbitBot Video](https://drive.google.com/file/d/1XsTYCbMzqiekOQdscCwxy-cij6P-kPcs/view)
 ### Jira
 * [Implement reCAPTCHA3 on Claim Flow](https://jira.fitbit.com/browse/SFDC-3720)
 ### Salesforce
