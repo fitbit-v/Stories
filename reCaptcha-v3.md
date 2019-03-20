@@ -1,6 +1,8 @@
 # reCAPTCHA V3
 ### Jira
 * [Implement reCAPTCHA3 on Claim Flow](https://jira.fitbit.com/browse/SFDC-3720)
+### Salesforce
+* [RecaptchaSample](https://devbox-fitbit.cs95.force.com/RecaptchaSample)
 ### Links
 * [reCAPTCHA demo](https://recaptcha-demo.appspot.com/)
 * [Am I Unique](https://amiunique.org/)

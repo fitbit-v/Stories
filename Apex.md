@@ -1,4 +1,5 @@
 # Apex
+* [Salesforce Security Guide](https://developer.salesforce.com/docs/atlas.en-us.218.0.securityImplGuide.meta/securityImplGuide/review_and_certification.htm)
 ## Best Practices
 1. Every Salesforce org with a strong development team always has just one trigger per object.  “One Trigger per Object” design pattern - combine all possible triggers on a specific object into just one trigger. 
 How do you combine many triggers into one?
