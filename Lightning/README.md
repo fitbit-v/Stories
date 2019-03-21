@@ -1,10 +1,16 @@
+### JavaScript Resources
 * https://caniuse.com/
 * http://jsbin.com/tavinaz/1/edit?js,console,output
 * https://jsbin.com/nuveda/11/edit?js,console,output
 * https://www.w3counter.com/globalstats.php
 * https://jsbin.com/kejonuq/28/edit?html,js,output
 * https://jsbin.com/mamager/1/edit?js,console
-
+* [Example Code for JavaScript for Salesforce Developers Trailhead module](https://github.com/pchittum/js-skills-for-sf-developers)
+* [JavaScript Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+* [Working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+* [Details of the object model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+* [Lightning Aura Components Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/intro_framework.htm)
+* 
 
 
 ### Declaring Variables
@@ -66,3 +72,5 @@ There are six primitive types in JavaScript: string, number, Boolean, null, unde
 The class keyword in JavaScript is a nice bit of syntactic sugar to address the complexities of prototype inheritance using constructor functions. Under the covers, the engine is still using Object.create and there is still no class (in the object-oriented sense), just that in-memory prototype object that is the actual source of inheritance. 
 
 
+## Events and Functions
+* 
