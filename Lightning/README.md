@@ -73,4 +73,7 @@ The class keyword in JavaScript is a nice bit of syntactic sugar to address the 
 
 
 ## Events and Functions
-* 
+* Parts of the DOM emit events that correspond to what that DOM object does.
+* Buttons have click events
+* input and select controls have change events
+* To make something happen in a web page, functions get assigned to these events as event handlers. 
