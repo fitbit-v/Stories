@@ -16,6 +16,11 @@
 * [ES6 In Depth: Rest parameters and defaults](https://hacks.mozilla.org/2015/05/es6-in-depth-rest-parameters-and-defaults/)
 * [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 * [Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+* [static keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)
+* [Details of the object model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+* [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+* [Object-oriented JavaScript: A Deep Dive into ES6 Classes](https://www.sitepoint.com/object-oriented-javascript-deep-dive-es6-classes/)
+* 
 
 
 ### Declaring Variables
@@ -174,3 +179,7 @@ console.log(typeof Parent)
 ```
 * `super` keyword, which allows you to reference the parent constructor and the method definitions from the Base class. Whenever you see the `super` keyword, you know you are in a derived class and referring to the base class.
 
+* access an exported variable that was imported as a single object - use the as keyword to assign an alias, reference the alias and property name
+
+### Asynchronous JavaScript
+A callback function is a function that executes after another function has finished executing.
