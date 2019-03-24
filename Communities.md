@@ -1,4 +1,5 @@
 ## Communities Implementation
+<<<<<<< HEAD
 * TLS handshake??
 ### Community's Login Experience
 1. Customize default login page (choose which login page to use)
@@ -12,3 +13,15 @@
 3. Add your SAML Configuration to the Authentication Service within the Authentication Configuration section of My Domain using the steps in Add Identity Providers on a Login Page.  This domain URL will be the one you add as a connection to Salesforce for iOS and Android when logging in to start the SP-initiated Single Sign-On Process.
 4. After your My Domain is entered, you should land on a web page that has a form for the User to input their network username and password.
 5. 
+=======
+* Helpsite replatforming
+
+Design for:
+* EOS, Realto
+
+##
+* prechat form 
+
+* migrate help site to customer community
+
+>>>>>>> a6702e8450bfcf474ed9821af110de32efd6e322
