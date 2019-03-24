@@ -127,4 +127,10 @@ showMessage("Vuk")  // Displays "Vuk says Hello World"
 ```
 In the above function, the second parameter is an object that is specified with the destructuring syntax.  Equal sign followed by empty curly braces enables you to call the function without parameters.  
 
-* Rest parameters are indicated 
+* Rest parameters are indicated with three dots (...) and they can appear only at the end of the argument list:
+```javascript 
+function showContact (firstName, lastName, ...titles)  {
+  console.log(firstName + ' ' + lastName + ', ' + titles[0] + ' and ' + titles[1]);
+}
+showContact('Sue', 'Johnson', 'Developer', 'Architect');  
+```
