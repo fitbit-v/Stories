@@ -77,3 +77,11 @@ The class keyword in JavaScript is a nice bit of syntactic sugar to address the 
 * Buttons have click events
 * input and select controls have change events
 * To make something happen in a web page, functions get assigned to these events as event handlers. 
+
+### Block Scope
+Block scoping ensures that any variables defined within those braces don’t become global variables. They instead have local scope. Having this type of control over how variables are scoped helps you prevent unexpected behaviour in your code. 
+* Variables assigned with `let` are always block scoped. 
+* Variables assigned with `let` cannot be hoisted. 
+* Hoisting occurs when the JavaScript interpreter makes two passes at your code.
+* In the first pass, variable and function declarations are “hoisted” to the top of the code.
+* In the second pass they are evaluated and assignments are made. 
