@@ -115,3 +115,16 @@ let [one, two, three, four] = numbers
 console.log(one)
 
 ```
+### JavaScript Functions
+* if you include the curly braces, the `return` keyword is required.
+* Functions have a special variable called `this`, often referred to as the “dynamic this,” which refers to the object used to invoke the function.
+* Referencing the `this` keyword inside the nested function just refers to the scope in which the object was invoked
+```javascript 
+function showMessage(who, {p1 = "Hello", p2 = "World"} = {}) {
+  console.log(who + ' says ' + p1 + p2);
+}
+showMessage("Vuk")  // Displays "Vuk says Hello World"
+```
+In the above function, the second parameter is an object that is specified with the destructuring syntax.  Equal sign followed by empty curly braces enables you to call the function without parameters.  
+
+* Rest parameters are indicated 
