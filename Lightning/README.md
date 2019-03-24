@@ -10,7 +10,12 @@
 * [Working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 * [Details of the object model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
 * [Lightning Aura Components Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/intro_framework.htm)
-* 
+* [Arrow functions in the mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 
+* [ES6 Arrow Functions: Fat and Concise Syntax in JavaScript](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
+* [Default Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+* [ES6 In Depth: Rest parameters and defaults](https://hacks.mozilla.org/2015/05/es6-in-depth-rest-parameters-and-defaults/)
+* [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+* [Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 
 ### Declaring Variables
@@ -134,3 +139,38 @@ function showContact (firstName, lastName, ...titles)  {
 }
 showContact('Sue', 'Johnson', 'Developer', 'Architect');  
 ```
+The three dots ( … ) operator has two uses. As the rest operator, it is used to gather up all the remaining arguments into an array. But as the spread operator, it is used to expand a single variable into an array. 
+* ... allows you to use zero or more arguments
+
+### JavaScript Classes
+Prior to ES6, if you wanted to create a class in JavaScript, you used prototypes
+* function declarations can be hoisted - you can call a function that has yet to be declared.
+* Classes come in two flavors: base classes and derived classes. The difference is the extends keyword. Derived classes (also known as subclasses) have them
+```javascript
+class Parent {
+  constructor(name) {
+    this.name = name
+  }
+
+  getName() {
+    return this.name
+  }
+}
+
+//
+class Child extends Parent {
+  constructor(name) {
+    super(name)
+  }
+
+  getMessage() {
+    return 'Hello ' + super.getName()
+  }
+}
+
+let someone = new Child('person')
+console.log(someone.getMessage()) // Displays "Hello person"
+console.log(typeof Parent)
+```
+* `super` keyword, which allows you to reference the parent constructor and the method definitions from the Base class. Whenever you see the `super` keyword, you know you are in a derived class and referring to the base class.
+
