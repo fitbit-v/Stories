@@ -88,4 +88,15 @@ Block scoping ensures that any variables defined within those braces don’t bec
 * Variables declared with the `const` keyword are also block-scoped and cannot be hoisted
 * Constants are not immutable.  This means that it is possible to modify the properties of objects or arrays assigned with const. 
 * when dealing with objects or arrays, only the object itself cannot be reassigned. Properties within that object or array can be changed.
-* 
+```javascript
+let firstName = 'John', lastName = 'Doe';
+//properties of an object are initialized using variables
+let user = {
+  firstName : firstName,
+  lastName : lastName
+}
+console.log(user);
+// ======
+
+
+```
