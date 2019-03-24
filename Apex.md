@@ -10,3 +10,20 @@ What are the benefits of this design pattern?
 
 2. Bulkification
 3. 
+
+
+##
+* Console density is not the same on Lightning
+* Lightning migration must be done by October 1
+* It will take 6 weeks to roll it out to agents
+* Create another sandbox 
+* Technical roadblocks for Lightning
+* POC in a new sandbox
+* Fitbit+ is a health coaching platform
+* Dual skilled agents
+* 
+
+## Omni-channel
+* federated to voice
+* email 
+
