@@ -97,6 +97,21 @@ let user = {
 }
 console.log(user);
 // ======
+let firstName = 'John', lastName = 'Doe';
+let user = { firstName, lastName };
+console.log(user); 
 
+// getting data out of arrays or objects:
+let numbers = [1,2,3,4]
+
+let one = numbers[0],
+    two = numbers[1],
+    three = numbers[2],
+    four = numbers[3]
+console.log(one)
+
+// array destructuring
+let [one, two, three, four] = numbers
+console.log(one)
 
 ```
