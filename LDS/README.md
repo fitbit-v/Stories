@@ -1,5 +1,6 @@
 # Lightning Data Service
-LDS is the Lightning Components counterpart to the Visualforce standard controller, providing access to the data displayed on a page.
+* [Working with Salesforce Data](https://developer.salesforce.com/docs/atlas.en-us.218.0.lightning.meta/lightning/data.htm)
+LDS is the Lightning Components counterpart to the Visualforce standard controller, providing access to the data displayed on a page.  The magic of LDS is when you have multiple components in a Lightning application that pull from the same record data.
 
 Lightning Data Service:
 * identifies and eliminates requests that involve the same record data, 
@@ -22,6 +23,8 @@ XMLHttpRequest (XHR) is an API in the form of an object whose methods transfer d
 Without LDS, each component within an app makes independent calls to the server to perform CRUD operations on a record, even if all components in the app pull from the same record data. Each server call reduces performance, leaving users twiddling their thumbs instead of working with their data. These independent server calls can also lead to inconsistencies, creating situations where a server call refreshes one component, leaving other components out of date.
 
 ## Form-Based Components and force:recordData
+`force:recordData` tag is the logic used to communicate with the server and manage the local cache.  For users to view and modify the data fetched by LDS, you have to include UI elements. The `force:recordData` tag uses the UI API to provide data to UI components.
+
 
 | Form Function | |
 | --- | --- |
@@ -50,7 +53,7 @@ Additional attributes:
 * `targetFields` is populated with the simplified view of the loaded record
 * `targetError` is populated with any errors
 
-```cmp
+```xml
 <force:recordData aura:id="forceRecordCmp" 
   <!-- aura:id is required to reference the component in your Javascript controller -->
     recordId="{!v.recordId}"
@@ -61,4 +64,31 @@ Additional attributes:
     targetFields="{!v.simpleRecord}" 
     targetError="{!v.error}"
 />
+
+
+<aura:component>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="simpleRecord" type="Object" />
+     <force:recordData recordId="{!v.recordId}"
+          targetRecord ="{!v.record}"
+          targetFields ="{!v.simpleRecord}"
+          fields="Id, Name" />
+    <div class="recordName">
+        <p class="slds-text-heading--medium">
+            <lightning:formattedtext title="Record Name" value="{!v.simpleRecord.Name}" /></p>
+    </div>
+</aura:component>
 ```
+
+Several Aura methods to modify records are available.  Overview of methods in JavaScript component controllers:
+* `saveRecord()` inserts or updates the record loaded into the `force:recordData` component.
+* `deleteRecord()` deletes the loaded record.
+* `getNewRecord()` loads a new record template that performs an insert when saved.
+* `reloadRecord()` reruns the loading code to overwrite the current `targetRecord` with the current attribute values.\
+
+### Loading Records
+Load the record by including `force:recordData` in your component while specifying the `recordId`, `mode`, and `layoutType` or `fields` attributes.
+
+
+
