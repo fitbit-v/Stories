@@ -26,3 +26,6 @@ Without LDS, each component within an app makes independent calls to the server 
 | Form Function | |
 | --- | --- |
 | Display, create, or edit records | `lightning:recordForm` | 
+| Display records only | `lightning:recordViewForm` (with `lightning:outputField`)
+| Create or edit records only | `lightning:recordEditForm` (with `lightning:inputField`)
+| Display, create, edit, or delete records with granular customization | `force:recordData` |
