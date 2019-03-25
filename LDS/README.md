@@ -29,3 +29,36 @@ Without LDS, each component within an app makes independent calls to the server 
 | Display records only | `lightning:recordViewForm` (with `lightning:outputField`)
 | Create or edit records only | `lightning:recordEditForm` (with `lightning:inputField`)
 | Display, create, edit, or delete records with granular customization | `force:recordData` |
+
+The form-based components take care of:
+* layout, 
+* validation, 
+* CRUD changes, and 
+* error handling. 
+
+On its own, force:recordData doesn’t include any UI elements; it’s simply logic and a way to communicate to the server.
+Use it to create highly customizable user interfaces beyond what the form-based components provide. 
+
+To load a record on the client side, you have to add the `force:recordData` tag to your component, and set your `recordId`, `mode`, and `layoutType` or `fields` attributes.
+* `recordId` specifies the record to load. Records can’t be loaded without a recordId.
+* mode can be set to either `EDIT` or `VIEW`, which determines the behavior of notifications and what operations are available to perform with the record. If you’re using `force:recordData` to change the record in any way, set the mode to `EDIT`.
+* `layoutType` specifies the layout (`FULL` or `COMPACT`) used to display the record, which determines what fields are included. Using `layoutType` allows your component to adapt to layout definitions.
+* `fields` specifies which fields in the record to query.
+
+Additional attributes:
+* `targetRecord` is populated with the loaded record
+* `targetFields` is populated with the simplified view of the loaded record
+* `targetError` is populated with any errors
+
+```cmp
+<force:recordData aura:id="forceRecordCmp" 
+  <!-- aura:id is required to reference the component in your Javascript controller -->
+    recordId="{!v.recordId}"
+    layoutType="{!v.layout}"
+    fields="{!v.fieldsToQuery}"
+    mode="VIEW"
+    targetRecord="{!v.record}"
+    targetFields="{!v.simpleRecord}" 
+    targetError="{!v.error}"
+/>
+```
