@@ -1,4 +1,5 @@
 ### JavaScript Resources
+* [ECMA Script Compatibility Table](http://kangax.github.io/compat-table/es6/)
 * https://caniuse.com/
 * http://jsbin.com/tavinaz/1/edit?js,console,output
 * https://jsbin.com/nuveda/11/edit?js,console,output
@@ -77,3 +78,61 @@ The class keyword in JavaScript is a nice bit of syntactic sugar to address the 
 * Buttons have click events
 * input and select controls have change events
 * To make something happen in a web page, functions get assigned to these events as event handlers. 
+*  DOM events and other events related to the browser environment are not actually part of the core JavaScript language, rather they are APIs that are implemented for JavaScript in the browser. 
+* When an event is emitted, a message is created in the engine. It is these messages that are placed in the event queue.
+* Once the stack is free, the event handler is invoked.
+* This creates what’s referred to as a frame on the call stack.
+* Each time one function invokes another, a new frame is added to the stack, and when complete, it is popped off the stack, until finally the frame for the actual event handler is popped, the stack is empty, and we start all over again. 
+
+### Defining and Assigning Functions
+* In JavaScript functions are essentially special objects. 
+* As objects, they are first-class members of JavaScript. 
+* They can be assigned as the values of variables, passed into other functions as parameters, and returned from functions. 
+* When function is declared, its definition is loaded into memory. 
+* A pointer is then assigned to it in the form of a variable name, parameter name, or an object property.
+* there are several different syntaxes to do this.
+
+#### Function Declaration
+```javascript
+// declare function
+function calculateGearRatio(driverGear, drivenGear){
+  return (driverGear / drivenGear);
+}
+// call function
+let gearRatio = calculateGearRatio(42, 30);
+console.log(gearRatio); // 1.4
+```
+```javascript
+// call function
+let gearRatio = calculateGearRatio(42, 30);
+// function is declared after the line it is called
+// this is allowed in function declaration
+function calculateGearRatio(driverGear, drivenGear){
+  return (driverGear / drivenGear);
+}
+console.log(gearRatio); // 1.4
+```
+#### Function Expressions
+```javascript
+const calculateGearRatio = function(driverGear, drivenGear){
+  return (driverGear / drivenGear);
+}
+// the rest works the same
+let gearRatio = calculateGearRatio(42, 30);
+console.log(gearRatio); // 1.4
+```
+In this instance we have an explicitly assigned variable. Since we’ve named the pointer, we can drop the function name after the `function` keyword. The only catch here is that the function must be declared prior to it being invoked. 
+
+#### Returning a Function
+Since functions are first-class objects, another way to declare a function is when a function returns another function. This pattern is often referred to as a factory function. 
+```javascript
+// when invoked, this function will assign a function
+function gearFactory(){
+  return function(driverGear, drivenGear){
+    return (driverGear / drivenGear);
+  }
+}
+// calculateGearRatio can now be invoked as a function
+const calculateGearRatio = gearFactory();
+// and all the rest
+```
