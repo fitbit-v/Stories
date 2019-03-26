@@ -6,7 +6,7 @@ Here are the external js library links we talked about over the meeting. These k
 https://staticcs.fitbit.com/content/assets/help/js/pkb.js
 https://staticcs.fitbit.com/content/assets/help/js/contactMobile.js
 
-Also in regard to Data Category section(on help site product page), here is the Apex methods detail:
+Also in regard to Data Category section (on help site product page), here is the Apex methods detail:
 * [Static CS pkb.js](https://staticcs.fitbit.com/content/assets/help/js/pkb.js)
 * [Static CS contactMobile.js](https://staticcs.fitbit.com/content/assets/help/js/contactMobile.js)
 

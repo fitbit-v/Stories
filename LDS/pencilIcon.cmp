@@ -1,0 +1,12 @@
+<!-- Add this component to an account record Lightning page -->
+<aura:component implements = "flexipage:availableForRecordHome, force:hasRecordId">
+    <aura:attribute name = "recordId" type="String" />
+    <lightning:card title = "Display, Create or Edit records">
+        <lightning:recordForm recordId = "{!v.record}"
+                            objectApiName = "Account"
+                            fields = "Name"  />
+        </lightning:card>
+</aura:component>
+
+<!-- The record ID is inherited from the record page via the force:hasRecordId interface. 
+    Leaving out the recordId attribute displays a form that creates a new record.-->
