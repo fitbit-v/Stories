@@ -72,4 +72,9 @@ Grax - Salesforce plugin
 
 ### Current Stories
 * reCAPTCHA implementation 
-    * 
+    * Page 1
+* pbkController refactoring
+* Lightning migration
+    * Planning stage - add Jira ticket
+* Technical architecture for Help site migration
+* 
