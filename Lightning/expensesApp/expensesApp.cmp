@@ -1,0 +1,8 @@
+<aura:application extends="force:slds">
+       
+        <!-- This component is the real "app" -->
+        <!-- c:expenses/ -->
+</aura:application>
+
+<!-- By way of the wrapper app, components use the extends="force:slds" 
+    mechanism to get access to SLDS when they run from this application.-->

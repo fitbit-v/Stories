@@ -11,6 +11,16 @@
 * [Working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 * [Details of the object model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
 * [Lightning Aura Components Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/intro_framework.htm)
+* [Arrow functions in the mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 
+* [ES6 Arrow Functions: Fat and Concise Syntax in JavaScript](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
+* [Default Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+* [ES6 In Depth: Rest parameters and defaults](https://hacks.mozilla.org/2015/05/es6-in-depth-rest-parameters-and-defaults/)
+* [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+* [Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+* [static keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)
+* [Details of the object model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+* [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+* [Object-oriented JavaScript: A Deep Dive into ES6 Classes](https://www.sitepoint.com/object-oriented-javascript-deep-dive-es6-classes/)
 * 
 
 
@@ -78,6 +88,7 @@ The class keyword in JavaScript is a nice bit of syntactic sugar to address the 
 * Buttons have click events
 * input and select controls have change events
 * To make something happen in a web page, functions get assigned to these events as event handlers. 
+<<<<<<< HEAD
 *  DOM events and other events related to the browser environment are not actually part of the core JavaScript language, rather they are APIs that are implemented for JavaScript in the browser. 
 * When an event is emitted, a message is created in the engine. It is these messages that are placed in the event queue.
 * Once the stack is free, the event handler is invoked.
@@ -136,3 +147,101 @@ function gearFactory(){
 const calculateGearRatio = gearFactory();
 // and all the rest
 ```
+=======
+
+### Block Scope
+Block scoping ensures that any variables defined within those braces don’t become global variables. They instead have local scope. Having this type of control over how variables are scoped helps you prevent unexpected behaviour in your code. 
+* Variables assigned with `let` are always block scoped. 
+* Variables assigned with `let` cannot be hoisted. 
+* Hoisting occurs when the JavaScript interpreter makes two passes at your code.
+* In the first pass, variable and function declarations are “hoisted” to the top of the code.
+* In the second pass they are evaluated and assignments are made. 
+* Variables declared with the `const` keyword are also block-scoped and cannot be hoisted
+* Constants are not immutable.  This means that it is possible to modify the properties of objects or arrays assigned with const. 
+* when dealing with objects or arrays, only the object itself cannot be reassigned. Properties within that object or array can be changed.
+```javascript
+let firstName = 'John', lastName = 'Doe';
+//properties of an object are initialized using variables
+let user = {
+  firstName : firstName,
+  lastName : lastName
+}
+console.log(user);
+// ======
+let firstName = 'John', lastName = 'Doe';
+let user = { firstName, lastName };
+console.log(user); 
+
+// getting data out of arrays or objects:
+let numbers = [1,2,3,4]
+
+let one = numbers[0],
+    two = numbers[1],
+    three = numbers[2],
+    four = numbers[3]
+console.log(one)
+
+// array destructuring
+let [one, two, three, four] = numbers
+console.log(one)
+
+```
+### JavaScript Functions
+* if you include the curly braces, the `return` keyword is required.
+* Functions have a special variable called `this`, often referred to as the “dynamic this,” which refers to the object used to invoke the function.
+* Referencing the `this` keyword inside the nested function just refers to the scope in which the object was invoked
+```javascript 
+function showMessage(who, {p1 = "Hello", p2 = "World"} = {}) {
+  console.log(who + ' says ' + p1 + p2);
+}
+showMessage("Vuk")  // Displays "Vuk says Hello World"
+```
+In the above function, the second parameter is an object that is specified with the destructuring syntax.  Equal sign followed by empty curly braces enables you to call the function without parameters.  
+
+* Rest parameters are indicated with three dots (...) and they can appear only at the end of the argument list:
+```javascript 
+function showContact (firstName, lastName, ...titles)  {
+  console.log(firstName + ' ' + lastName + ', ' + titles[0] + ' and ' + titles[1]);
+}
+showContact('Sue', 'Johnson', 'Developer', 'Architect');  
+```
+The three dots ( … ) operator has two uses. As the rest operator, it is used to gather up all the remaining arguments into an array. But as the spread operator, it is used to expand a single variable into an array. 
+* ... allows you to use zero or more arguments
+
+### JavaScript Classes
+Prior to ES6, if you wanted to create a class in JavaScript, you used prototypes
+* function declarations can be hoisted - you can call a function that has yet to be declared.
+* Classes come in two flavors: base classes and derived classes. The difference is the extends keyword. Derived classes (also known as subclasses) have them
+```javascript
+class Parent {
+  constructor(name) {
+    this.name = name
+  }
+
+  getName() {
+    return this.name
+  }
+}
+
+//
+class Child extends Parent {
+  constructor(name) {
+    super(name)
+  }
+
+  getMessage() {
+    return 'Hello ' + super.getName()
+  }
+}
+
+let someone = new Child('person')
+console.log(someone.getMessage()) // Displays "Hello person"
+console.log(typeof Parent)
+```
+* `super` keyword, which allows you to reference the parent constructor and the method definitions from the Base class. Whenever you see the `super` keyword, you know you are in a derived class and referring to the base class.
+
+* access an exported variable that was imported as a single object - use the as keyword to assign an alias, reference the alias and property name
+
+### Asynchronous JavaScript
+A callback function is a function that executes after another function has finished executing.
+>>>>>>> 3d10c036b65daeb455065c2b9a448ab5648b757d
