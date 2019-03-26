@@ -76,10 +76,13 @@ Grax - Salesforce plugin
     * Corporate Programs page
     * Female Health page
     * SSC
-    * Email forms
+    * Email form
+* reCAPTCHA V2 and V3 architecture overview with John Meyer
 * pbkController refactoring
 * Lightning migration
-    * Planning stage - add Jira ticket
+    * Planning stage 
+    * List of features to be migrated
+    * 
 * Technical architecture for Help site migration
 * Preventing Account Takeover (PTA)
 * Salesforce Live Agent architecture design (Petr Prisyazhniuk request)
