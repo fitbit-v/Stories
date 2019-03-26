@@ -78,11 +78,11 @@ Grax - Salesforce plugin
     * SSC
     * Email form
 * reCAPTCHA V2 and V3 architecture overview with John Meyer (3/26/2019)
-* Help site migration: pbkController refactoring
+* Help site migration: pkbController refactoring
 * Lightning migration
     * Planning stage 
     * List of features to be migrated
-    * Feature architecture (LWS vs Aura, LDS vs Apex)
+    * Feature architecture (LWC vs Aura, LDS vs Apex)
     * Identify feature which cannot be migrated to Lightning stack
 * Technical architecture for Help site migration
 * Preventing Account Takeover (PTA)
