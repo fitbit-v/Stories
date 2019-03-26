@@ -78,4 +78,6 @@ Grax - Salesforce plugin
     * Planning stage - add Jira ticket
 * Technical architecture for Help site migration
 * Preventing Account Takeover (PTA)
-    * 
+* Salesforce Live Agent architecture design by Petr Prisyazhniuk
+* [DNS Security (DNSSEC) Update for Salesforce Domains](https://help.salesforce.com/articleView?id=000274941&language=en_US&type=1)
+    * Salesforce domains that are part of Salesforce applications will have a new security feature (DNS Security, or DNSSEC) enabled. This is a DNS based trust validation when connecting to Salesforce application entry points (i.e. Salesforce Communities and MyDomain).

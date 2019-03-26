@@ -2,6 +2,10 @@
 * [Authenticated Site Configuration](https://jira.fitbit.com/browse/SFDC-2672?jql=ORDER%20BY%20lastViewed%20DESC)
 * [Sync Doctor UX Specification V0 - Confluence Page](https://wiki.fitbit.com/pages/viewpage.action?spaceKey=~Akumar&title=Sync+Doctor+UX+Specification+-+V0)
 * [Some users receiving an error after clicking the YGO link](https://jira.fitbit.com/browse/SFDC-4578)
+* [Configure SAML Settings for Single Sign-On](https://help.salesforce.com/articleView?id=sso_saml.htm&type=5)
+* [Configure SAML for Communities](https://help.salesforce.com/articleView?id=networks_auth_configure_saml.htm&type=5)
+* [Customize SAML Start, Error, Login, and Logout Pages](https://developer.salesforce.com/docs/atlas.en-us.sso.meta/sso/sso_saml_start_stop_pages.htm)
+
 
 So basically we have a myhelp community page that is incorporated in the Mobile app and that myhelp community is behind the accounts.fitbit.com portal. This portal sense the fitbit.com session, if there an active fitbit.com session then it directly takes us this community page and if there is no active fitbit.com session then it asks for the login. 
 
