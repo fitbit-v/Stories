@@ -13,8 +13,6 @@
     ]
 } 
 
-Secret:LBDqQzZ2C4Wz3QSrvObckULUXXvS70KyWALFbSFo
-AKIAJCSY2KVBQMDURA4Q
 
 arn:aws:s3:::graxtest
 
@@ -24,10 +22,9 @@ arn:aws:iam::243926876979:policy/GraxS3Policy
 
 =====
 S3 Access Key ID
-AKIAIPM7FOVDNREUVWBQ
 =====
 S3 Secret access key
-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
+
 
 ### AWS S3
 * [Elasticsearch-EyP-ExYKRPK1JyEYFHwpdw](https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Datanode_EyP-ExYKRPK1JyEYFHwpdw_fitbittest)
