@@ -71,8 +71,12 @@ Grax - Salesforce plugin
 
 
 ### Current Stories
-* reCAPTCHA implementation 
-    * Page 1
+* reCAPTCHA implementation - pages:
+    * pre-Chat page
+    * Corporate Programs page
+    * Female Health page
+    * SSC
+    * Email forms
 * pbkController refactoring
 * Lightning migration
     * Planning stage - add Jira ticket
@@ -85,4 +89,4 @@ Grax - Salesforce plugin
 * Chat concurrency issue
     * Next step: onsite meeting with Salesforce support team
 * GRAX implementation
-    * Next step: AWS Elasticsearch implementation
+    * Next step: AWS Elasticsearch implementation, AWS S3 account provisioning
