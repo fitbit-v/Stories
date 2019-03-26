@@ -68,3 +68,8 @@ Grax - Salesforce plugin
 * have to be off of the site platform at the end of May
 * forms need to be running on myhelp
 * move all of the chat to an authenticated site
+
+
+### Current Stories
+* reCAPTCHA implementation 
+    * 

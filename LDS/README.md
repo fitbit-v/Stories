@@ -2,6 +2,14 @@
 * [Working with Salesforce Data](https://developer.salesforce.com/docs/atlas.en-us.218.0.lightning.meta/lightning/data.htm)
 LDS is the Lightning Components counterpart to the Visualforce standard controller, providing access to the data displayed on a page.  The magic of LDS is when you have multiple components in a Lightning application that pull from the same record data.
 
+### Asynchronous Record Saving
+ In the event of a connection problem, LDS stores record changes in a local cache.  This is indicated by a `DRAFT` state in the `SaveRecordResult` object. A record’s `DRAFT` state is resolved when the connection is restored. When saving a record through LDS, the local cache isn’t updated until the save is complete. When the save is successfully completed on the server, the cache is updated to the latest version of the record from the server, and all components with a reference to that record are notified. 
+
+Saves that occur when a device is offline result in a DRAFT state if you enable asynchronous save permissions, or if all of the following are true:
+* The client can’t reach the server.
+* The org has enabled offline drafts.
+* You have version 9.0 or newer of the Salesforce app.
+
 Lightning Data Service:
 * identifies and eliminates requests that involve the same record data, 
 * sending a single shared data request that updates all relevant components. Not only does this eliminate inconsistent data between components, 
