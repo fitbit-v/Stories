@@ -81,3 +81,8 @@ Grax - Salesforce plugin
 * Salesforce Live Agent architecture design by Petr Prisyazhniuk
 * [DNS Security (DNSSEC) Update for Salesforce Domains](https://help.salesforce.com/articleView?id=000274941&language=en_US&type=1)
     * Salesforce domains that are part of Salesforce applications will have a new security feature (DNS Security, or DNSSEC) enabled. This is a DNS based trust validation when connecting to Salesforce application entry points (i.e. Salesforce Communities and MyDomain).
+* SalesforceDX (DevOps for Salesforce) implementation
+* Chat concurrency issue
+    * Next step: onsite meeting with Salesforce support team
+* GRAX implementation
+    * Next step: AWS Elasticsearch implementation
