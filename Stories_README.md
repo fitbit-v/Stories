@@ -60,7 +60,7 @@ Grax - Salesforce plugin
 * on ios it is not working
 * how are we storing account information in Saleforce, we copy fitbit token to Salesforce
 * Subaru's team is in their
-* what happens when we merged contacts with the fitbit ids
+* what happens when we merged cont2acts with the fitbit ids
 * ids are stored in the intersection object between contacts and community
 * YGO Claims and Community Users
 * move PKB from help.com to myHelp.com
@@ -82,7 +82,8 @@ Grax - Salesforce plugin
     * Planning stage - add Jira ticket
 * Technical architecture for Help site migration
 * Preventing Account Takeover (PTA)
-* Salesforce Live Agent architecture design by Petr Prisyazhniuk
+* Salesforce Live Agent architecture design (Petr Prisyazhniuk request)
+    * Human coaching chat vision
 * [DNS Security (DNSSEC) Update for Salesforce Domains](https://help.salesforce.com/articleView?id=000274941&language=en_US&type=1)
     * Salesforce domains that are part of Salesforce applications will have a new security feature (DNS Security, or DNSSEC) enabled. This is a DNS based trust validation when connecting to Salesforce application entry points (i.e. Salesforce Communities and MyDomain).
 * SalesforceDX (DevOps for Salesforce) implementation
