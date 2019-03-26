@@ -49,7 +49,7 @@ Grax - Salesforce plugin
 * `Amazon S3 Glacier Deep Archive` (S3 Glacier Deep Archive) for long-term archive and digital preservation. Amazon S3 also offers capabilities to manage your data throughout its lifecycle. Once an S3 Lifecycle policy is set, your data will automatically transfer to a different storage class without any changes to your application.  
 =======
 
->>>>>>> 3d1b44807fc269a600b283f95ddacccdff1d06d5
+>>>>>>>
 
 * own the security approach
 * how to keep safe the accounts in SFDC
