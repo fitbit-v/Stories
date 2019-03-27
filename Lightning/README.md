@@ -1,4 +1,6 @@
 ### JavaScript Resources
+* [Lightning Container in Communities](https://developer.salesforce.com/blogs/2019/02/lightning-container-in-communities.html)
+
 * [ECMA Script Compatibility Table](http://kangax.github.io/compat-table/es6/)
 * https://caniuse.com/
 * http://jsbin.com/tavinaz/1/edit?js,console,output
