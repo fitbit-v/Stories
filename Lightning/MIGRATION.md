@@ -83,3 +83,16 @@
 | (4) Compact case feed | Understand case progression and case history at a glance with a news-like feed and preconfigured pages. Colorful icons help you distinguish between people and interactions instantly, and you can add a quick comment to help your customers or team. |
 | (5) Knowledge component | See suggested articles from your knowledge base to solve cases faster, search articles to find exactly what you need, and attach common solutions from similar cases. (You must enable Lightning Knowledge first.) |
 | (6) Preconfigured utility bar | Increase productivity with tools, such as Notes to jot things down, or History to go back to recently viewed records. |
+
+| Salesforce Classic | Lightning Experience |
+| --- | --- |
+| Salesforce Console for Service | Lightning Service Console |
+| Navigation Tab | Navigation Bar |
+| Pinned Lists | Split View |
+| Choose How Lists and Records Display | Navigation Rules |
+| Console Components for Page Layouts | Lightning Components |
+| Console Components for Apps (Footer) | Utilities |
+| Console Footer | Utility Bar |
+| History Component | History Utility |
+| Macros Browser Footer Component | Macros Utility |
+| Salesforce Console Integration Toolkit | Lightning Console Javascript API |
