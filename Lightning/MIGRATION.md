@@ -96,3 +96,12 @@
 | History Component | History Utility |
 | Macros Browser Footer Component | Macros Utility |
 | Salesforce Console Integration Toolkit | Lightning Console Javascript API |
+
+### New Lightning App
+
+| Feature | |
+| --- | --- |
+| Navigation Style | Console Navigation | 
+| Utility Items | quick access to productivity tools and add background utility| 
+| Navigation Items | Choose the items to include in the app |
+| Navigation Rules | Navigation rules determine whether to open a related record in addition to the primary record. |
