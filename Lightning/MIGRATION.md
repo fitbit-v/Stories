@@ -1,5 +1,6 @@
 # Migration
-
+## Resources
+* [Compare Lightning Experience and Salesforce Classic](https://help.salesforce.com/articleView?id=lex_aloha_comparison.htm&type=5)
 ## Classic Service Console
 * Contact Detail
 * Feed (Social, Email, Post, Log a call, Update Case)
@@ -49,8 +50,8 @@
 4. Social Customer Service
     * Social business rules - to define how social cases are handled.
 
-### Custom Panels
- Fitbit Payments Panel: This panel shows the cards linked and the transactions using the Fitbit watch.
+## Custom Panels
+ ### Fitbit Payments Panel: This panel shows the cards linked and the transactions using the Fitbit watch
 
     Below are the Jira Stories for the payments Panel:
     1. SFDC-1648
@@ -73,6 +74,27 @@
     Other Helper Classes: PaymentUtilityClass, PaymentTrackerInfoWrapper, PaymentTransactionWrapper, PaymentActivityWrapper, FitbitUserWrapper, Fitbit_ApiCallout_utility
 
     Custom Setting: CSFitbitOauth__c
+
+### Order Panel: This panel shows the orders for the customers
+Below is the component list for the Order panel: 
+Vf page: Orders_Console_Panel
+We are using Orders_Console_Panel Vf page to show the order details on the basis of Email address. There are two different tabs for CAT orders and AU/NZ Orders.
+a) If the case country is Not equal to AU/NZ, We are hiding the AU/NZ Orders Tab.
+b) If case Country is AU/NZ, We are showing the orders under the AU/NZ Orders tab else orders are showing under the CAT Order Tab.
+
+We are using Contact.FitbitOrderEmail from the case in order panel. If there are no Orders associated with FitbitOrderEmail then we will go with Contact Email. And if there are no orders for Contact email as well then we are showing the message in the panel "No orders with that email". 
+If API Returns any error or there is an exception in code, we are showing the generic error message to the agent.
+
+Apex class:
+a) OrderController :
+Methods: fetchValidAccessToken (to get the access token for CAT Orders)
+fetchauNZToken (to get the access token for AU/NZ Orders)
+getPrimaryEmailAddress (Used to get the email address from the case). 
+getOrders (Used to hit the Order lookup API). When Country is AU/NZ we are using the AU/NZ Order URL otherwise we are using the CAT Order URL.
+ 
+b) OrderWrapper: This is the Wrapper class.
+
+Custom setting: CSFitbitOauth(Authorization Endpoint), API_END_POINTS(Order API Endpoint for CAT and AU/NZ), Global Features(Turn off or Turn on Switch to show the orders in order panel)
 
 ### Service Console
 | Benefit | Description |
@@ -98,10 +120,15 @@
 | Salesforce Console Integration Toolkit | Lightning Console Javascript API |
 
 ### New Lightning App
-
 | Feature | |
 | --- | --- |
 | Navigation Style | Console Navigation | 
 | Utility Items | quick access to productivity tools and add background utility| 
 | Navigation Items | Choose the items to include in the app |
 | Navigation Rules | Navigation rules determine whether to open a related record in addition to the primary record. |
+#### Service Console Feed
+Determine which fields from the Contact object to add to Feed tracking
+
+https://fitbit.lightning.force.com/speedtest.jsp
+
+
