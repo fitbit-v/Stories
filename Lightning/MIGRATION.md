@@ -1,6 +1,15 @@
 # Migration
 ## Resources
 * [Compare Lightning Experience and Salesforce Classic](https://help.salesforce.com/articleView?id=lex_aloha_comparison.htm&type=5)
+* [Octane test](https://fitbit.my.salesforce.com/speedtest.jsp)
+* [Evaluate and Roll Out Lightning Experience for Your Org](https://help.salesforce.com/articleView?id=lex_welcome_to_lex.htm&type=5)
+* [Lightning LockerService](https://medium.com/@mohitkumarsrivastav/lightning-lockerservice-is-coming-are-you-ready-4de798c7a1d9)
+* [Salesforce Lightning Component LockerService](https://medium.com/@mohitkumarsrivastav/salesforce-lightning-component-lockerservice-demystified-7e596e04a01f)
+* [Implement and Use Lightning Service Components](https://developer.salesforce.com/blogs/2018/08/implement-and-use-lightning-service-components.html)
+* [DOM](https://dom.spec.whatwg.org/#concept-event)
+* [Lightning Web Components Dev Guide](https://developer.salesforce.com/docs/component-library/documentation/lwc/lwc.interop_aura_composition)
+* [Working with Aura and Lightning Web Components: Interoperability and Migration](https://developer.salesforce.com/blogs/2019/02/working-with-aura-and-lightning-web-components-interoperability-and-migration.html)
+
 ## Classic Service Console
 * Contact Detail
 * Feed (Social, Email, Post, Log a call, Update Case)
