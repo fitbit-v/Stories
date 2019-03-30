@@ -130,13 +130,17 @@ Custom setting: CSFitbitOauth(Authorization Endpoint), API_END_POINTS(Order API 
 | Macros Browser Footer Component | Macros Utility |
 | Salesforce Console Integration Toolkit | Lightning Console Javascript API |
 
-### New Lightning App
+
+## Proposed Implementation
+#### New Lightning App [Fitbit Customer Service](https://fitbit--lightning.lightning.force.com/lightning/r/Case/5000t000005JT3QAAW/view)
 | Feature | |
 | --- | --- |
 | Navigation Style | Console Navigation | 
 | Utility Items | quick access to productivity tools and add background utility| 
 | Navigation Items | Choose the items to include in the app |
 | Navigation Rules | Navigation rules determine whether to open a related record in addition to the primary record. |
+
+#### 
 #### Service Console Feed
 Determine which fields from the Contact object to add to Feed tracking
 
