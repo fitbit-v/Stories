@@ -3,6 +3,7 @@
 * [Compare Lightning Experience and Salesforce Classic](https://help.salesforce.com/articleView?id=lex_aloha_comparison.htm&type=5)
 * [Octane test](https://fitbit.my.salesforce.com/speedtest.jsp)
 * [Evaluate and Roll Out Lightning Experience for Your Org](https://help.salesforce.com/articleView?id=lex_welcome_to_lex.htm&type=5)
+* [Fitbit Integrations Review](https://docs.google.com/document/d/1RD36S96KuU1ygn-mJm7-OG-JWsGwNFvex6PwCz_F3so/edit)
 * [Lightning LockerService](https://medium.com/@mohitkumarsrivastav/lightning-lockerservice-is-coming-are-you-ready-4de798c7a1d9)
 * [Lightning Data Service](https://developer.salesforce.com/docs/atlas.en-us.218.0.lightning.meta/lightning/data_service.htm)
 * [Salesforce Lightning Component LockerService](https://medium.com/@mohitkumarsrivastav/salesforce-lightning-component-lockerservice-demystified-7e596e04a01f)
