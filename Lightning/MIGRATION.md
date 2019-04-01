@@ -1,4 +1,23 @@
 # Migration
+
+* Determine steps to have Feed on the contact level
+* Determine what can be migrated
+* Plan on how to rework features which cannot be migrated
+* List of hot case detail fields.  What Lightning options exist for having a component?
+* List of toolkit features - showing the Case Tools to advocates in a Lightning console.
+* List of dockable features - how the Lightning interface works, and specifically options for how components can get rendered in a Lightning Console. 
+* Five9 softphone utility - get the Five9 Lightning-enable softphone working in the Lighning Service Console
+* Determine which functionality blocks will be migrated:
+    * Feed 
+    * hot fields 
+    * case tools
+    * Fitbit integrations
+        * Fitbit Payments Panel
+        * Order Panel
+        * Dutch Panel
+        * Family Account Panel
+    * Contact data.  
+* POC: Lightning Service Cloud V1.0
 ## Classic Service Console
 * Contact Detail
 * Feed (Social, Email, Post, Log a call, Update Case)
@@ -43,7 +62,6 @@
 * Feed (major pixel real-estate), hot fields, case tools, Fitbit integrations (Dutch, Orders, etc.), and contact data
 ## Lightning Service Console
 1. Recently Viewed
-2. 
 3. Omni-Channel 
 4. Social Customer Service
     * Social business rules - to define how social cases are handled.
@@ -127,6 +145,31 @@ Custom setting: CSFitbitOauth(Authorization Endpoint), API_END_POINTS(Order API 
 
 
 ## Proposed Implementation
+### Service Console
+#### Lightning Experience Console Limitations
+##### Visualforce
+Visualforce is available in Lightning console apps as beta, which means it’s a high-quality feature with known limitations. 
+
+Lightning console apps’ Visualforce support includes:
+* Lightning pages containing Visualforce Lightning components
+* Visualforce mass actions
+* Custom tabs that display a Visualforce page
+* Opening Visualforce pages as new workspace tabs or subtabs using the openTab() and openSubtab() JS APIs
+* Visualforce overrides for new, edit, view, tab, list, and clone actions
+* Visualforce components in the utility bar
+
+##### Lightning console apps don’t currently support:
+* Visualforce overrides for delete and custom actions
+* Visualforce buttons and links
+* Overrides aren’t supported on the Case object when using the default service console app. To use overrides on cases, create a custom console app.
+* Region presentation—size 
+    * In Salesforce Classic, you can adjust the size of a component. In Lightning Experience, the page template for your record page determines the size of the component region. For example, the three columns page template provides a main column width of 50%, and the side columns widths are each 25%. To view the available page templates, create a page in Lightning App Builder.
+* Multi-monitor—pop-out workspaces - In Salesforce Classic, this feature is called multi-monitor components.
+* The utility bar doesn’t support Visualforce pages or components.
+* The utility bar doesn’t fully support the Chatter Publisher and Feed components.
+* 
+
+
 #### New Lightning App: [Fitbit Customer Service](https://fitbit--lightning.lightning.force.com/lightning/r/Case/5000t000005JT3QAAW/view)
 | Feature | |
 | --- | --- |
