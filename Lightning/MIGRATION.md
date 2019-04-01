@@ -11,11 +11,11 @@
     * Feed 
     * hot fields 
     * case tools
-    * Fitbit integrations
-        * Fitbit Payments Panel - Aura Component in 
-        * Order Panel
-        * Dutch Panel
-        * Family Account Panel
+    * Fitbit integrations 
+        * Fitbit Payments Panel - Aura Component embedded inside of the Accordion Standard Component, annotated Apex classes
+        * Order Panel - Aura Component embedded inside of the Accordion Standard Component, annotated Apex classes
+        * Dutch Panel - Aura Component embedded inside of the Accordion Standard Component, annotated Apex classes
+        * Family Account Panel - Aura Component embedded inside of the Accordion Standard Component, annotated Apex classes
     * Contact data.  
 * POC: Lightning Service Cloud V1.0
 ### Salesforce Classic Service Console Features
