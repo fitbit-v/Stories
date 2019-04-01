@@ -91,6 +91,12 @@
     
     CSFitbitOauth__c
 
+    Migration:
+
+    * Replace JavaScript buttons with Quick Actions
+        * For the component to know its page context, it must implement the `force:hasRecordId` interface.
+        * 
+
 ### Order Panel: This panel shows the orders for the customers
 Component list for the Order panel: 
 Vf page: Orders_Console_Panel
@@ -172,4 +178,16 @@ Interoperatibilty
 * Referential integrity - development error and user runtime error in place
 
 ### SalesforceDX Setup
-* Bui
+
+## Create Support Processes
+
+### Create a New User Using Lightning Setup Flow  
+### Configure Case Status Picklist Values 
+### Create a product support process to support product-related cases.
+### Create an inquiry support process for customer inquiries.
+### Create Case Page Layouts
+* Highlights Panel
+* Quick Actions in the Salesforce Classic Publisher
+* Case Detail
+### Create Record Types 
+### Create a Case to Test Your Support Processes 
