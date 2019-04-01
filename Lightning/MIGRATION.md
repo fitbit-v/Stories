@@ -121,6 +121,32 @@ b) OrderWrapper: This is the Wrapper class.
 
 Custom setting: CSFitbitOauth(Authorization Endpoint), API_END_POINTS(Order API Endpoint for CAT and AU/NZ), Global Features(Turn off or Turn on Switch to show the orders in order panel)
 
+### Dutch panel
+This panel shows the devices linked to the customer email.  This is a very old project so it has many Jira Stories, so we are not listing it here. 
+
+Below is the component list for the Dutch panel:   
+VF page: DutchConsole
+We are using DutchConsole Vf page to show the details of devices associated with case.fitbitEmail.
+When there are no devices associated with fitbitEmail, we are showing the message in the panel "No email addresses available to lookup in Dutch". If API Returns any error or there is an exception in code, we are showing the generic error message to the agent.
+
+Apex classes: 
+a) DutchDataController: This is the main Controller of Vf page. We have written the API Callout for Dutch API to get the details of the devices for email. (Method = getUserDevicesForEmail)
+Method used for Authorization : DutchDataController.fetchValidAccessToken
+b) DutchDeviceTreeJS: This class is used to deserialize the Dutch response and we filter out the fields which are needed to show on Dutch panel.
+c) DeviceWarrantyCtrl = This class is used to get the warranty start date based on device serial number.
+d) DutchDeviceData, DeviceWarrantyWrapper: These are the two Wrapper classes we are using.
+
+Custom setting: CSFitbitOauth (AUTHORIZE_URL__c, USER_DEVICES_URL__c)
+
+### Family Account Panel 
+This panel shows the family members linked to the account in the case.fitbit_email__C.
+
+Jira EPIC: SFDC-2748
+Vf Page: FamilyAccountPanel
+Apex Controller: FamilyAccountPanelCtrl
+Wrapper Class: FamilyAccountWrapper
+Custom Setting: API_End_Points__c, CSFitbitOauth__c 
+
 ### Service Console
 | Benefit | Description |
 | --- | --- |
