@@ -12,7 +12,7 @@
     * hot fields 
     * case tools
     * Fitbit integrations
-        * Fitbit Payments Panel
+        * Fitbit Payments Panel - Aura Component in 
         * Order Panel
         * Dutch Panel
         * Family Account Panel
