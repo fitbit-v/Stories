@@ -67,7 +67,8 @@
     * Social business rules - to define how social cases are handled.
 
 ## Custom Panels
- ### Fitbit Payments Panel: This panel shows the cards linked and the transactions using the Fitbit watch
+ ### Fitbit Payments Panel 
+ This panel shows the cards linked and the transactions using the Fitbit watch
 
     Below are the Jira Stories for the payments Panel:
     1. SFDC-1648
