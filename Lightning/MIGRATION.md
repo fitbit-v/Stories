@@ -1,15 +1,18 @@
 # Migration
 ## Resources
 * [Compare Lightning Experience and Salesforce Classic](https://help.salesforce.com/articleView?id=lex_aloha_comparison.htm&type=5)
-* [Octane test](https://fitbit.my.salesforce.com/speedtest.jsp)
 * [Evaluate and Roll Out Lightning Experience for Your Org](https://help.salesforce.com/articleView?id=lex_welcome_to_lex.htm&type=5)
-* [Fitbit Integrations Review](https://docs.google.com/document/d/1RD36S96KuU1ygn-mJm7-OG-JWsGwNFvex6PwCz_F3so/edit)
+* [Fitbit Console Migration Document](https://docs.google.com/document/d/1RD36S96KuU1ygn-mJm7-OG-JWsGwNFvex6PwCz_F3so/edit)
 * [Lightning LockerService](https://medium.com/@mohitkumarsrivastav/lightning-lockerservice-is-coming-are-you-ready-4de798c7a1d9)
 * [Lightning Data Service](https://developer.salesforce.com/docs/atlas.en-us.218.0.lightning.meta/lightning/data_service.htm)
+* [Lightning Experience Pro Tip Series](https://admin.salesforce.com/lightning-experience-pro-tip-series)
 * [Salesforce Lightning Component LockerService](https://medium.com/@mohitkumarsrivastav/salesforce-lightning-component-lockerservice-demystified-7e596e04a01f)
 * [Implement and Use Lightning Service Components](https://developer.salesforce.com/blogs/2018/08/implement-and-use-lightning-service-components.html)
 * [DOM](https://dom.spec.whatwg.org/#concept-event)
+* [Lightning Experience Configuration Converter](https://lightning-configuration.salesforce.com/visualforce-pages.xhtml)
 * [Lightning Web Components Dev Guide](https://developer.salesforce.com/docs/component-library/documentation/lwc/lwc.interop_aura_composition)
+* [Magic Mover for Notes And Attachments to Lightning Experience](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000EHAmyUAH)
+* [Octane test](https://fitbit.my.salesforce.com/speedtest.jsp)
 * [Working with Aura and Lightning Web Components: Interoperability and Migration](https://developer.salesforce.com/blogs/2019/02/working-with-aura-and-lightning-web-components-interoperability-and-migration.html)
 
 ## Classic Service Console
@@ -69,7 +72,7 @@
     2. SFDC-1881
     3. SFDC-2029
 
-    Below is the component list for the payment panel:
+    Component list for the payment panel:
 
     VF Page:
 
@@ -84,10 +87,12 @@
     API Helper Apex Class: PaymentAPICtrl [fitbit.my.salesforce.com]
     Other Helper Classes: PaymentUtilityClass, PaymentTrackerInfoWrapper, PaymentTransactionWrapper, PaymentActivityWrapper, FitbitUserWrapper, Fitbit_ApiCallout_utility
 
-    Custom Setting: CSFitbitOauth__c
+    Custom Setting: 
+    
+    CSFitbitOauth__c
 
 ### Order Panel: This panel shows the orders for the customers
-Below is the component list for the Order panel: 
+Component list for the Order panel: 
 Vf page: Orders_Console_Panel
 We are using Orders_Console_Panel Vf page to show the order details on the basis of Email address. There are two different tabs for CAT orders and AU/NZ Orders.
 a) If the case country is Not equal to AU/NZ, We are hiding the AU/NZ Orders Tab.
@@ -132,7 +137,7 @@ Custom setting: CSFitbitOauth(Authorization Endpoint), API_END_POINTS(Order API 
 
 
 ## Proposed Implementation
-#### New Lightning App [Fitbit Customer Service](https://fitbit--lightning.lightning.force.com/lightning/r/Case/5000t000005JT3QAAW/view)
+#### New Lightning App: [Fitbit Customer Service](https://fitbit--lightning.lightning.force.com/lightning/r/Case/5000t000005JT3QAAW/view)
 | Feature | |
 | --- | --- |
 | Navigation Style | Console Navigation | 
@@ -144,6 +149,27 @@ Custom setting: CSFitbitOauth(Authorization Endpoint), API_END_POINTS(Order API 
 #### Service Console Feed
 Determine which fields from the Contact object to add to Feed tracking
 
-https://fitbit.lightning.force.com/speedtest.jsp
+### JavaScript Buttons
+Create a Lightning component. Then give users access by either invoking access from a Lightning component action or using Lightning App Builder to add the Lightning component to a Lightning page.
+This button contains code for a conditional URL. Consider this customizable sample component as a replacement: redirectConditionalUrl.
+
+##
+### Productivity 
+* Use web standards like ES6+, classes, modules, custom elements, and templates.
+* Access, cache, and synchronize data and meta-data with `@wire` decorator
+* Get 70+ meta-data aware base Lightining Components
+* Aura and LWC components communicate via Events Public API
+Performance 
+* more code executing natively in the browser and less code executing in the javascript framework
+* (cacheable=true)
+Interoperatibilty
 
 
+
+* Apex methods have to be annotated with `@AuraEnabled(cacheable=true)`
+* to import Apex method use this script: `import findContacts from '@salesforce/apex/ContactController.findContacts';`
+* LWC are meta-data aware - native metadata bindings
+* Referential integrity - development error and user runtime error in place
+
+### SalesforceDX Setup
+* Bui
