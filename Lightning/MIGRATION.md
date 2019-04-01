@@ -18,7 +18,7 @@
         * Family Account Panel
     * Contact data.  
 * POC: Lightning Service Cloud V1.0
-## Classic Service Console
+### Salesforce Classic Service Console Features
 * Contact Detail
 * Feed (Social, Email, Post, Log a call, Update Case)
 * Cases Section?
