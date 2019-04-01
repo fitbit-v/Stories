@@ -4,19 +4,18 @@
 * Determine what can be migrated
 * Plan on how to rework features which cannot be migrated
 * List of hot case detail fields.  What Lightning options exist for having a component?
-* List of toolkit features - showing the Case Tools to advocates in a Lightning console.
-* List of dockable features - how the Lightning interface works, and specifically options for how components can get rendered in a Lightning Console. 
+* List of toolkit features - showing the Case Tools to advocates in a Lightning console. 
 * Five9 softphone utility - get the Five9 Lightning-enable softphone working in the Lighning Service Console
 * Determine which functionality blocks will be migrated:
-    * Feed 
-    * hot fields 
-    * case tools
+    * Feed - Use custom feed filters
+    * hot fields - 
+    * case tools - 
     * Fitbit integrations 
         * Fitbit Payments Panel - Aura Component embedded inside of the Accordion Standard Component, annotated Apex classes
         * Order Panel - Aura Component embedded inside of the Accordion Standard Component, annotated Apex classes
         * Dutch Panel - Aura Component embedded inside of the Accordion Standard Component, annotated Apex classes
         * Family Account Panel - Aura Component embedded inside of the Accordion Standard Component, annotated Apex classes
-    * Contact data.  
+    * Contact data - Aura component with Lightning Data Service
 * POC: Lightning Service Cloud V1.0
 ### Salesforce Classic Service Console Features
 * Contact Detail
