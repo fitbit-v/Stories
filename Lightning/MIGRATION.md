@@ -1,20 +1,4 @@
 # Migration
-## Resources
-* [Compare Lightning Experience and Salesforce Classic](https://help.salesforce.com/articleView?id=lex_aloha_comparison.htm&type=5)
-* [Evaluate and Roll Out Lightning Experience for Your Org](https://help.salesforce.com/articleView?id=lex_welcome_to_lex.htm&type=5)
-* [Fitbit Console Migration Document](https://docs.google.com/document/d/1RD36S96KuU1ygn-mJm7-OG-JWsGwNFvex6PwCz_F3so/edit)
-* [Lightning LockerService](https://medium.com/@mohitkumarsrivastav/lightning-lockerservice-is-coming-are-you-ready-4de798c7a1d9)
-* [Lightning Data Service](https://developer.salesforce.com/docs/atlas.en-us.218.0.lightning.meta/lightning/data_service.htm)
-* [Lightning Experience Pro Tip Series](https://admin.salesforce.com/lightning-experience-pro-tip-series)
-* [Salesforce Lightning Component LockerService](https://medium.com/@mohitkumarsrivastav/salesforce-lightning-component-lockerservice-demystified-7e596e04a01f)
-* [Implement and Use Lightning Service Components](https://developer.salesforce.com/blogs/2018/08/implement-and-use-lightning-service-components.html)
-* [DOM](https://dom.spec.whatwg.org/#concept-event)
-* [Lightning Experience Configuration Converter](https://lightning-configuration.salesforce.com/visualforce-pages.xhtml)
-* [Lightning Web Components Dev Guide](https://developer.salesforce.com/docs/component-library/documentation/lwc/lwc.interop_aura_composition)
-* [Magic Mover for Notes And Attachments to Lightning Experience](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000EHAmyUAH)
-* [Octane test](https://fitbit.my.salesforce.com/speedtest.jsp)
-* [Working with Aura and Lightning Web Components: Interoperability and Migration](https://developer.salesforce.com/blogs/2019/02/working-with-aura-and-lightning-web-components-interoperability-and-migration.html)
-
 ## Classic Service Console
 * Contact Detail
 * Feed (Social, Email, Post, Log a call, Update Case)
@@ -191,3 +175,23 @@ Interoperatibilty
 * Case Detail
 ### Create Record Types 
 ### Create a Case to Test Your Support Processes 
+
+
+
+
+
+## Resources
+* [Compare Lightning Experience and Salesforce Classic](https://help.salesforce.com/articleView?id=lex_aloha_comparison.htm&type=5)
+* [Evaluate and Roll Out Lightning Experience for Your Org](https://help.salesforce.com/articleView?id=lex_welcome_to_lex.htm&type=5)
+* [Fitbit Console Migration Document](https://docs.google.com/document/d/1RD36S96KuU1ygn-mJm7-OG-JWsGwNFvex6PwCz_F3so/edit)
+* [Lightning LockerService](https://medium.com/@mohitkumarsrivastav/lightning-lockerservice-is-coming-are-you-ready-4de798c7a1d9)
+* [Lightning Data Service](https://developer.salesforce.com/docs/atlas.en-us.218.0.lightning.meta/lightning/data_service.htm)
+* [Lightning Experience Pro Tip Series](https://admin.salesforce.com/lightning-experience-pro-tip-series)
+* [Salesforce Lightning Component LockerService](https://medium.com/@mohitkumarsrivastav/salesforce-lightning-component-lockerservice-demystified-7e596e04a01f)
+* [Implement and Use Lightning Service Components](https://developer.salesforce.com/blogs/2018/08/implement-and-use-lightning-service-components.html)
+* [DOM](https://dom.spec.whatwg.org/#concept-event)
+* [Lightning Experience Configuration Converter](https://lightning-configuration.salesforce.com/visualforce-pages.xhtml)
+* [Lightning Web Components Dev Guide](https://developer.salesforce.com/docs/component-library/documentation/lwc/lwc.interop_aura_composition)
+* [Magic Mover for Notes And Attachments to Lightning Experience](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000EHAmyUAH)
+* [Octane test](https://fitbit.my.salesforce.com/speedtest.jsp)
+* [Working with Aura and Lightning Web Components: Interoperability and Migration](https://developer.salesforce.com/blogs/2019/02/working-with-aura-and-lightning-web-components-interoperability-and-migration.html)
