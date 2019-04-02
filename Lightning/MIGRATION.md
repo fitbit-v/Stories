@@ -7,14 +7,14 @@
 * List of toolkit features - showing the Case Tools to advocates in a Lightning console. 
 * Five9 softphone utility - get the Five9 Lightning-enable softphone working in the Lighning Service Console
 * Determine which functionality blocks will be migrated:
-    * Feed - Use custom feed filters
+    * Feed - Standard Feed Filters for: Use custom feed filters
     * hot fields - 
     * case tools - 
     * Fitbit integrations 
-        * Fitbit Payments Panel - Aura Component embedded inside of the Accordion Standard Component, annotated Apex classes
-        * Order Panel - Aura Component embedded inside of the Accordion Standard Component, annotated Apex classes
-        * Dutch Panel - Aura Component embedded inside of the Accordion Standard Component, annotated Apex classes
-        * Family Account Panel - Aura Component embedded inside of the Accordion Standard Component, annotated Apex classes
+        * Fitbit Payments Panel - Aura Component embedded inside of the Accordion Standard Component, annotate Apex classes
+        * Order Panel - Aura Component embedded inside of the Accordion Standard Component, annotate Apex classes
+        * Dutch Panel - Aura Component embedded inside of the Accordion Standard Component, annotate Apex classes
+        * Family Account Panel - Aura Component embedded inside of the Accordion Standard Component, annotate Apex classes
     * Contact data - Aura component with Lightning Data Service
 * POC: Lightning Service Cloud V1.0
 ### Salesforce Classic Service Console Features
@@ -264,3 +264,19 @@ Interoperatibilty
 * [Magic Mover for Notes And Attachments to Lightning Experience](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000EHAmyUAH)
 * [Octane test](https://fitbit.my.salesforce.com/speedtest.jsp)
 * [Working with Aura and Lightning Web Components: Interoperability and Migration](https://developer.salesforce.com/blogs/2019/02/working-with-aura-and-lightning-web-components-interoperability-and-migration.html)
+* [Classic Console API Methods Supported in the Lightning Console API](https://developer.salesforce.com/docs/atlas.en-us.218.0.api_console.meta/api_console/sforce_api_console_lightning_classic_bridge_methods.htm)
+* [Sample Components for Lightning Component Actions](https://github.com/fitbit-v/LEXComponentsBundle)
+* [Softphones for Lightning Console Apps](https://help.salesforce.com/articleView?id=console_lex_custom_utilities_softphone.htm&type=5)
+* [Lightning Console JavaScript API for Lightning Experience](https://developer.salesforce.com/docs/atlas.en-us.api_console.meta/api_console/sforce_api_console_js_getting_started.htm)
+* [Create Publisher Actions ](https://trailhead.salesforce.com/content/learn/modules/chatter/chatter_actions)
+* [Feed Filters to Manage Your Feed ](https://trailhead.salesforce.com/en/content/learn/modules/service_casefeed_basics/service_casefeed_basics_filters)
+* [Lightning Console Migration](https://trailhead.salesforce.com/en/content/learn/modules/service_casefeed_basics/service_casefeed_basics_filters)
+* [Five9 Console](https://app.five9.com/?role=DomainSupervisor)
+* [Supported Salesforce Experiences and Tools](https://developer.salesforce.com/docs/component-library/documentation/lwc/lwc.get_started_supported_experiences)
+* [LWC APP Sample Gallery](https://trailhead.salesforce.com/sample-gallery)
+* [Features Available in Lightning Console Apps](https://help.salesforce.com/articleView?id=console_lex_feature_parity.htm&type=5)
+* [Component Reference](https://developer.salesforce.com/docs/component-library/overview/components)
+* [Lightning Web Components Recipes, Patterns and Best Practices](https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components-recipes-patterns-and-best-practices.html)
+* [Introducing Lightning Web Components Trailmix](https://trailhead.salesforce.com/en/users/strailhead/trailmixes/introducing-lightning-web-components)
+* [`forceChatter:feed`](https://developer.salesforce.com/docs/component-library/bundle/forceChatter:feed/documentation)
+* 
