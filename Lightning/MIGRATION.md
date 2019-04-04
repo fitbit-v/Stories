@@ -285,21 +285,21 @@ Custom console components are Visualforce pages that customize or extend a conso
 
 #### Global Action
 ##### Action Type
-    * Create a Record
-    * Send Email
-    * Log a Call
-    * Custom Visualforce
-    * Custom Canvas
-    * Lightning Component
+* Create a Record
+* Send Email
+* Log a Call
+* Custom Visualforce
+* Custom Canvas
+* Lightning Component
 ##### Record Type
-The record type for records or call logs created by this action.
-    * Task
-    * LinkedIn InMail
-    * LinkedIn Message
-    * PointDrive Created
-    * PointDrive Viewed
-    * Corporate Wellness - Enterprise
-    * Corporate Wellness - SMB
+The record type for records or call logs created by this action:
+* Task
+* LinkedIn InMail
+* LinkedIn Message
+* PointDrive Created
+* PointDrive Viewed
+* Corporate Wellness - Enterprise
+* Corporate Wellness - SMB
 ##### Case Feed Item
 If enabled, creates a feed item when the action is performed.  The feed item's fields are defined by the target object's compact layout.
 ##### Success Message
