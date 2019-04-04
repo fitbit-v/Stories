@@ -303,3 +303,12 @@ The record type for records or call logs created by this action:
 ##### Case Feed Item
 If enabled, creates a feed item when the action is performed.  The feed item's fields are defined by the target object's compact layout.
 ##### Success Message
+This message displays when an action is performed successfully but does not create a feed item.  
+#### App Personalization Settings
+Disable end user personalization of nav items in this app
+
+Questions for Bridget:
+* Label name on Utility Items?
+* Icon on Utility Items?
+* Panel Width on Utility Items?
+* Panel Height on Utility Items?

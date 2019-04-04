@@ -95,3 +95,7 @@ Grax - Salesforce plugin
     * Next step: onsite meeting with Salesforce support team
 * GRAX implementation
     * Next step: AWS Elasticsearch implementation, AWS S3 account provisioning
+
+
+
+* SFDC 4340
