@@ -280,3 +280,26 @@ Interoperatibilty
 * [Introducing Lightning Web Components Trailmix](https://trailhead.salesforce.com/en/users/strailhead/trailmixes/introducing-lightning-web-components)
 * [`forceChatter:feed`](https://developer.salesforce.com/docs/component-library/bundle/forceChatter:feed/documentation)
 * 
+### Lightning Service Console
+Custom console components are Visualforce pages that customize or extend a console. Add components to page layouts so that users can access customizations when they view specific pages in a console. You can also add components to a console app so that users can access customizations that span across all pages and tabs in a console.
+
+#### Global Action
+##### Action Type
+    * Create a Record
+    * Send Email
+    * Log a Call
+    * Custom Visualforce
+    * Custom Canvas
+    * Lightning Component
+##### Record Type
+The record type for records or call logs created by this action.
+    * Task
+    * LinkedIn InMail
+    * LinkedIn Message
+    * PointDrive Created
+    * PointDrive Viewed
+    * Corporate Wellness - Enterprise
+    * Corporate Wellness - SMB
+##### Case Feed Item
+If enabled, creates a feed item when the action is performed.  The feed item's fields are defined by the target object's compact layout.
+##### Success Message
