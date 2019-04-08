@@ -300,9 +300,9 @@ The record type for records or call logs created by this action:
 * PointDrive Viewed
 * Corporate Wellness - Enterprise
 * Corporate Wellness - SMB
-##### Case Feed Item
+#### Case Feed Item
 If enabled, creates a feed item when the action is performed.  The feed item's fields are defined by the target object's compact layout.
-##### Success Message
+#### Success Message
 This message displays when an action is performed successfully but does not create a feed item.  
 #### App Personalization Settings
 Disable end user personalization of nav items in this app
@@ -312,3 +312,15 @@ Questions for Bridget:
 * Icon on Utility Items?
 * Panel Width on Utility Items?
 * Panel Height on Utility Items?
+
+#### Feed Tracking
+track fields on User, Group, Custom, and External objects, and the following standard records: Account, Article Type, Asset, Campaign, Case, Contact, Contract, Dashboard, Event, Lead, Opportunity, Product, Report, Solution, and Task.
+
+Fields that are tracked by default when you enable feed tracking for:
+* Account: Account Name, Account Owner
+* Case: Case Owner, Priority
+* Group: Allow Customers, Description, Access Type, Information, Information Title, Name, Owner
+* Contact: Account Name, Contact Owner, Name
+* Lead: Lead Owner, Lead Status, Name
+* Opportunity: Amount, Close Date, Opportunity Name, Opportunity Owner, Stage
+* User: About Me, Address, Email, Manager, Phone, Title
