@@ -1,0 +1,350 @@
+<apex:page cache="false"
+  standardStylesheets="false"
+  showHeader="false"
+  sidebar="false"
+  standardController="KnowledgeArticle"
+  extensions="pkb_Controller"
+  language="{!selectedLanguage}"
+  applyBodyTag="false"
+  applyHtmlTag="false"
+  action="{!actionMethod}"
+>
+
+<html lang="{!selectedLanguage}">
+  <head>
+    <title>{!pageTitle}</title>
+
+    <!-- Attempt to prevent IE from displaying in compatibility mode   -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Viewport setting, affects mobile especially -->
+    <meta name="viewport" content="initial-scale=1.0" />
+
+    <!-- Stop iOS from adding a phone number link, and messing up contact page formatting -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <script src="{!$Setup.BaseURL__c.assets_url__c}/libraries/foundation/js/vendor/jquery.js?v={!$Label.versionDateStamp}" /> <!-- jQuery 2.1.1 -->
+    <script src="{!$Setup.BaseURL__c.assets_url__c}/js/jQueryFix.js?v={!$Label.versionDateStamp}"></script>
+    <script src="{!$Setup.BaseURL__c.assets_url__c}/js/jQueryCookie.js?v={!$Label.versionDateStamp}"></script>
+    <script src="{!$Setup.BaseURL__c.assets_url__c}/js/Placeholder.js?v={!$Label.versionDateStamp}"></script> <!-- HTML5 polyfill -->
+    <script src="{!$Setup.BaseURL__c.assets_url__c}/js/jQueryFrac.js?v={!$Label.versionDateStamp}"></script>
+    <!-- Accordion Javascript -->
+
+    <script src="{!$Setup.BaseURL__c.assets_url__c}/js/accordion.js?v={!$Label.versionDateStamp}"></script>
+
+    <!-- global scripts -->
+    <script type="text/javascript">
+      // Load jQuery no conflict as $$
+      $$ = jQuery.noConflict();
+
+      // (document).ready
+      $$(document).ready(function() {
+
+        issuesBanner();
+        removeSalesforceCSS();
+        FastClick.attach(document.body);
+
+        // End (document).ready
+      });
+
+      // Disable default internal Salesforce CSS, which is loaded despite Apex:Page parameter standardStylesheets = false.
+      function removeSalesforceCSS()
+      {
+        $$("link.user").each(function(){
+          $$(this).remove();
+        });
+      }
+
+      function issuesBanner()
+      {
+        // By default the message is hidden from the user unless
+        //  The flag to show emerging issues is switched on and
+        //  The user has not already closed this message in the past 24 hours
+        var flagOn = ("{!pkbCon.mapLabel2Value['issues_banner_TOGGLE']
+}" == "true");
+        
+        var viewed = ($$.cookie('emergingIssueBannerCookie') != null);
+
+        if(flagOn && !viewed) {
+          // We just show banner here, instead of sliding down, to ensure mobile users see it before choosing a contact option on the mobile form
+          $$(".banner, div[id*=container_banner]").show();
+          $$(".close_banner").on("click",function(){
+            $$.cookie('emergingIssueBannerCookie', 'true', { expires: 1, path: '/' });
+            $$(".banner").fadeOut(500);
+            $$("div[id*=container_banner]").slideUp("slow");
+          });
+        }
+
+      }
+
+    <!---------------------------->
+    <!-- Default PKB Javascript -->
+    <!---------------------------->
+
+      // Define label variables for use in Javascript
+      // Explained here: http://salesforce.stackexchange.com/questions/32746/custom-labels-in-javascript
+      window.$pkbVar = window.$pkbVar || {};
+      
+      //$pkbVar.baseURL = "{!JSENCODE(HTMLENCODE(pkbCon.currentSiteUrl))}";
+      $pkbVar.baseURL = "{!$Site.BaseUrl}";
+      $pkbVar.pkbHome = "{!$Site.BaseUrl}";
+
+      $pkbVar.currSearch = jQuery.trim("{!JSENCODE(HTMLENCODE(pkbCon.urlSearchQuery))}");
+      $pkbVar.currLanguage = jQuery.trim("{!JSENCODE(HTMLENCODE(pkbCon.selectedLanguage))}");
+      $pkbVar.currCategories = jQuery.trim("{!JSENCODE(HTMLENCODE(pkbCon.selectedCategory))}");
+      $pkbVar.selectedProductCategory = jQuery.trim("{!JSENCODE(HTMLENCODE(pkbCon.selectedProductCategory))}");
+      $pkbVar.PKB2_js_search_string_length = '{!JSENCODE($Label.PKB2_js_search_string_length)}';
+
+      $pkbVar.contactUs = {!pkbCon.displayContactUs};
+      $pkbVar.viewingSearch = {!pkbCon.viewingSearch};
+      $pkbVar.viewingArticle = {!pkbCon.viewingArticle};
+      // START HERE AND PASTE ALL THE VARIABLES REPLACE below in PKB_JS and then keep going on spreadsheet!
+      $pkbVar.viewingCategory = {!pkbCon.viewingCategory};
+      $pkbVar.viewingProduct = {!pkbCon.viewingProduct};
+      $pkbVar.languageParam = "{!pkbCon.languageParam}";
+      $pkbVar.queryParam = "{!pkbCon.queryParam}";
+      $pkbVar.categoryParam = "{!pkbCon.categoryParam}";
+      $pkbVar.theKadID = "{!pkbCon.theKad.id}";
+    </script>
+
+    <script src="{!$Setup.BaseURL__c.assets_url__c}/js/pkb.js?v={!$Label.versionDateStamp}"></script>
+
+    <!--------------------------------->
+    <!-- Javascript for Contact Page -->
+    <!--------------------------------->
+    <!-- <c:pageContact_js rendered="{!displayContactUs}" /> -->
+      <apex:outputText rendered="{!displayContactUs}">
+
+        <!-- Plugins for contact page -->
+        <script src="{!$Setup.BaseURL__c.assets_url__c}/js/Mailcheck.js?v={!$Label.versionDateStamp}"></script> 
+        <script src="{!URLFOR($Resource.jQueryValidation)}"></script> <!-- Loading jQuery Validation from Salesforce because it wasn't working coming from Fitbit servers -->
+        <script src="{!$Setup.BaseURL__c.assets_url__c}/js/jQueryAutocomplete.js?v={!$Label.versionDateStamp}"></script>
+        <script src="{!$Setup.BaseURL__c.assets_url__c}/js/SelectToAutocomplete.js?v={!$Label.versionDateStamp}"></script>
+        <script src="{!$Setup.BaseURL__c.assets_url__c}/js/ImagePicker_v2.js?v={!$Label.versionDateStamp}"></script> <!-- Imagepicker V2 not compatible with main help site contact form, but use V2 when we update main form based on mobile wrapped form -->
+        <script src="{!$Setup.BaseURL__c.assets_url__c}/js/TextareaAutosize.js?v={!$Label.versionDateStamp}"></script>
+        <script src="{!$Setup.BaseURL__c.assets_url__c}/js/ScrollToBySpeed.js"></script>
+
+        <script type="text/javascript">
+          window.$Label = window.$Label || {};
+          $Label.fb_contact_required_name = '{!JSENCODE($Label.fb_contact_required_name)}';
+          $Label.fb_contact_required_email = '{!JSENCODE($Label.fb_contact_required_email)}';
+          $Label.fb_contact_required_country = '{!JSENCODE($Label.fb_contact_required_country)}';
+          $Label.fb_contact_required_product = '{!JSENCODE($Label.fb_contact_required_product)}';
+          $Label.fb_contact_required_platform = '{!JSENCODE($Label.fb_contact_required_platform)}';
+          $Label.fb_contact_required_issue = '{!JSENCODE($Label.fb_contact_required_issue)}';
+          $Label.fb_contact_required_related_issue = '{!JSENCODE($Label.fb_contact_required_related_issue)}';
+          $Label.fb_contact_required_description = '{!JSENCODE($Label.fb_contact_required_description)}';
+          $Label.fb_contact_invalid_email = '{!JSENCODE($Label.fb_contact_invalid_email)}';
+          $Label.fb_contact_invalid_description_max_length = '{!JSENCODE($Label.fb_contact_invalid_description_max_length)}';
+          $Label.fb_contact_opt_in_label = '{!JSENCODE($Label.fb_contact_opt_in_label)}';
+          $Label.fb_contact_select_a_file = '{!JSENCODE($Label.fb_contact_select_a_file)}';
+          $Label.fb_contact_mailcheck_did_you_mean = '{!JSENCODE($Label.fb_contact_mailcheck_did_you_mean)}';
+          $Label.fb_general_yes = '{!JSENCODE($Label.fb_general_yes)}';
+          $Label.fb_general_no = '{!JSENCODE($Label.fb_general_no)}';
+          $Label.fb_general_loading = '{!JSENCODE($Label.fb_general_loading)}';
+          $Label.fb_contact_placeholder_default_option = '{!JSENCODE($Label.fb_contact_placeholder_default_option)}';
+          $Label.fb_contact_not_sure = '{!JSENCODE($Label.fb_contact_not_sure)}';
+          $Label.fb_contact_not_sure_other = '{!JSENCODE($Label.fb_contact_not_sure_other)}';
+          $Label.fb_contact_other = '{!JSENCODE($Label.fb_contact_other)}';
+          $Label.BaseURL = '{!$Setup.BaseURL__c.assets_url__c}';
+          // These are the full size banner images, for product pages. Will comment out, since we're only using images on mobile form now
+          //$Label.productBannerImages = "{!$Resource.productBannerImages}"; // productBannerImages are hosted on Salesforce servers, because thumbnails on Contact Us form weren't generated properly when hosted on Fitbit servers 
+          // These are the mobile banner images. Both Retina and Normal are at retina height 80px, because the normal directory was being used inside the iOS app
+          $Label.productBannerImages = "{!$Resource.productBannerImagesMobile}";
+          $Label.emailUsParam = '{!JSENCODE($CurrentPage.parameters.emailUs)}';
+          $Label.selectedCountry = '{!selectedCountry}';
+          $Label.fb_contact_placeholder_product = '{!$Label.fb_contact_placeholder_product}';
+          $Label.fb_contact_placeholder_issue = '{!$Label.fb_contact_placeholder_issue}';
+          $Label.product = '{!$Label.product}';
+          $Label.issue = '{!$Label.issue}';
+
+          var productDesc = {
+            // NOTE - english wont work without _new and other languages wont work with new, used both, test thoroughly
+            "versa": "{!JSENCODE($Label.product_desc_versa)}",
+            "ace": "{!JSENCODE($Label.product_desc_ace)}",
+            "female_health_tracking": "{!JSENCODE($Label.product_desc_female_health_tracking)}",
+            "ionic_new": "{!JSENCODE($Label.product_desc_ionic)}",
+            "ionic": "{!JSENCODE($Label.product_desc_ionic)}",
+            "flyer_new": "{!JSENCODE($Label.product_desc_flyer)}",
+            "flyer": "{!JSENCODE($Label.product_desc_flyer)}",
+            "fitbit_coach_fitstar": "{!JSENCODE($Label.product_desc_coach)}",
+            // SAME AS ARIA
+            "aria_2_new": "{!JSENCODE($Label.product_desc_aria)}",
+            "aria_2": "{!JSENCODE($Label.product_desc_aria)}",
+            "surge": "{!JSENCODE($Label.product_desc_surge)}",
+            "blaze": "{!JSENCODE($Label.product_desc_blaze)}",
+            "charge_2": "{!JSENCODE($Label.product_desc_charge_2)}",
+            "charge_hr": "{!JSENCODE($Label.product_desc_charge_hr)}",
+            "charge_3": "{!JSENCODE($Label.product_desc_charge_2)}",
+            "alta_hr": "{!JSENCODE($Label.product_desc_charge_2)}",
+            "alta_hr_new": "{!JSENCODE($Label.product_desc_charge_2)}",
+            "alta": "{!JSENCODE($Label.product_desc_alta)}",
+            "charge": "{!JSENCODE($Label.product_desc_charge)}",
+            "force": "{!JSENCODE($Label.product_desc_force)}",
+            "flex_2": "{!JSENCODE($Label.product_desc_flex_2)}",
+            "flex": "{!JSENCODE($Label.product_desc_flex)}",
+            "one": "{!JSENCODE($Label.product_desc_one)}",
+            "zip": "{!JSENCODE($Label.product_desc_zip)}",
+            "ultra": "{!JSENCODE($Label.product_desc_ultra)}",
+            "aria": "{!JSENCODE($Label.product_desc_aria)}", 
+            "mobiletrack": "{!JSENCODE($Label.product_desc_mobiletrack)}",
+            "inspire": "{!JSENCODE($Label.product_desc_inspire)}",
+            "inspire_hr": "{!JSENCODE($Label.product_desc_inspire_hr)}",
+            "ace_2": "{!JSENCODE($Label.product_desc_ace_2)}",
+            "versa_lite": "{!JSENCODE($Label.product_desc_versa)}",
+            "not_sure": "{!JSENCODE($Label.product_desc_not_sure)}"
+          };
+        </script>
+
+        <!-- Javascript for Contact page. If mobile contact form, contactMobile.js, otherwise load contact.js -->
+        <script src="{!$Setup.BaseURL__c.assets_url__c}/js/contactMobile.js?v={!$Label.versionDateStamp}"></script>
+        <!-- <script src="{!URLFOR($Resource.contactMobileJS)}"></script>-->
+
+      </apex:outputText>
+
+    <!-- Meyers Reset CSS -->
+    <link rel="stylesheet" class="stylesheet" href="{!$Setup.BaseURL__c.assets_url__c}/css/reset.css?v={!$Label.versionDateStamp}" />
+
+    <!-- Foundation Modernizr -->
+    <script src="{!$Setup.BaseURL__c.assets_url__c}/libraries/foundation/js/vendor/modernizr.js?v={!$Label.versionDateStamp}"></script>
+
+    <!-- Web Fonts, load before Foundation.css -->
+    <link rel="stylesheet" class="stylesheet" href="{!$Setup.BaseURL__c.assets_url__c}/css/webFonts.css?v={!$Label.versionDateStamp}" />
+
+    <link rel="stylesheet" class="stylesheet" href="{!$Setup.BaseURL__c.assets_url__c}/libraries/foundation/css/normalize.css?v={!$Label.versionDateStamp}" />
+    <link rel="stylesheet" class="stylesheet" href="{!$Setup.BaseURL__c.assets_url__c}/libraries/foundation/css/foundation.css?v={!$Label.versionDateStamp}" />
+    <!-- Main Stylesheet, specific to wrapped template -->
+    <link rel="stylesheet" class="stylesheet" href="{!$Setup.BaseURL__c.assets_url__c}/css/styleWrapped.css?v={!$Label.versionDateStamp}" /> 
+    <link rel="stylesheet" class="stylesheet" href="{!$Setup.BaseURL__c.assets_url__c}/css/iconFonts.css?v={!$Label.versionDateStamp}" />
+
+    <!--Test style sheet to override styleWrapped.css on the server so every update doesn't require its own PR-->
+    <c:styletestWrapped />
+
+  </head>
+
+  <body class="wrapped {!IF(viewingHome,'viewingHome','')} {!selectedLanguage} co_{!selectedCountry} {!$CurrentPage.parameters.form} {!IF(displayContactUs,'ContactUsPage','')}">
+
+  <script>
+
+    // Google Analytics tracking code, same as for help.fitbit.com
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34364422-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();  
+    
+
+   // new fitbit.com tracking, 10/30/2015
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-68400100-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+
+  <!--->
+  <pre>
+  HELPFUL DEBUG DATA, from initial implementation August 2014
+
+  SITE ADMIN: {!siteAdmin.Email}, {!siteAdmin.Name}
+  ALL PARAMS: {!allSearchParams}
+  SITE/PAGE URL: {!currentSiteUrl}
+  FEEDBACK? : {!displayFeedback}
+  SESSION: {!$Api.Session_ID}
+  RSS URL: {!$Page.pkb_RSS}
+  CATEGORIES: {!selectedCategory}
+  KNOWLEDGE ARTICLE ID: {!theKad.Id}
+  KNOWLEDGE ARTICLE ID (FROM CONTROLLER): {!KnowledgeArticle.Id}
+  </pre>
+  <!---->
+  <!--->
+  <pre>
+  Current Page Language: {!$CurrentPage.parameters.lang}
+  User Info Language: {!userLanguage}
+  User Selected Language: {!selectedLanguage}
+  Custom Label: {!$Label.PKB2_Search_Prompt}
+  </pre>
+  <!---->
+
+
+<!--->
+<pre>
+viewingHome={!viewingHome}
+viewingVideos={!viewingVideos}
+viewingProduct={!viewingProduct}
+viewingCategory={!viewingCategory}
+viewingArticle={!viewingArticle}
+viewingSearch={!viewingSearch}
+displayContactUs={!displayContactUs}
+viewingThankYou={!viewingThankYou}
+viewing401={!viewing401}
+viewing509={!viewing509}
+viewing500={!viewing500}
+viewing404={!viewing404}
+viewingError={!viewingError}
+</pre>
+<!---->
+
+        <apex:outputText rendered="{!viewingError}">
+          <c:ErrorPage pkbCon="{!pkbCon}"></c:ErrorPage>
+        </apex:outputText>
+
+        <!-- wrap everything else in a NOT(viewingError) to reduce the size of the debug log -->
+        <apex:outputText rendered="{!NOT(viewingError)}">
+
+          <apex:outputText rendered="{!viewingMobileWrapped && displayContactUs}">
+            <apex:outputText rendered="{!if(UPPER($Label.is_salesforce_site_maintanence) == 'TRUE',true,false)}">
+                <c:SiteMaintanence pkbCon="{!pkbCon}" />
+            </apex:outputText>
+            <apex:outputText rendered="{!if(UPPER($Label.is_salesforce_site_maintanence) != 'TRUE',true,false)}">
+                <c:ContactPageMobile pkbCon="{!pkbCon}"></c:ContactPageMobile>
+            </apex:outputText>
+          </apex:outputText>
+
+          <apex:outputText rendered="{!viewingThankYou}">
+            <c:ThankYouPage pkbCon="{!pkbCon}"></c:ThankYouPage>
+          </apex:outputText>
+
+          <apex:outputText rendered="{!viewingPostChat}">
+            <c:PostChatPage pkbCon="{!pkbCon}"></c:PostChatPage>
+          </apex:outputText>
+
+          <apex:outputText rendered="{!viewingError}">
+            <c:ErrorPage pkbCon="{!pkbCon}"></c:ErrorPage>
+          </apex:outputText>
+
+        </apex:outputText> <!-- END: NOT(viewingError) -->
+
+
+  <!-- Footer scripts -->
+
+  <!-- Load Foundation javascripts individually for performance (full list of useful scripts can be found on Foundation 5 website). Remove foundation.min.js, then include foundation.js and any other scripts -->
+  <!--<script src="{!$Setup.BaseURL__c.assets_url__c}/libraries/foundation/js/foundation/foundation.js"></script>
+  <script src="{!$Setup.BaseURL__c.assets_url__c}/libraries/foundation/js/foundation/foundation.interchange.js"></script>-->
+  <!--<script src="{!$Setup.BaseURL__c.assets_url__c}/libraries/foundation/js/foundation/foundation.offcanvas.js"></script>-->
+
+  <!-- Removes 300ms delay for click to register on mobile devices --> 
+  <script src="{!$Setup.BaseURL__c.assets_url__c}/libraries/foundation/js/vendor/fastclick.js?v={!$Label.versionDateStamp}"></script>
+
+  <!--
+  <script type="text/javascript">
+    // initialize foundation
+    $$(document).foundation({
+      // Prevent offcanvas menu from closing when you click on it
+      offcanvas: {
+        close_on_click: false
+      }
+    });
+  </script>
+  -->
+
+  </body>
+</html>
+</apex:page>
+                                        
+ 	 

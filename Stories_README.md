@@ -96,6 +96,36 @@ Grax - Salesforce plugin
 * GRAX implementation
     * Next step: AWS Elasticsearch implementation, AWS S3 account provisioning
 
-
+#
 
 * SFDC 4340
+#
+https://s3.amazonaws.com/help-fitbit-com/
+
+## Centauri Manual
+`ContactPageMobile` is a VF component that invokes the Corporate Programs Page(the page which has Centauri manual pdf's) In Mobile App, but this code is commented on the production environment due to pdf issue we had.
+
+Code which opens the Corporate Programs Page in the web-view resides on Mobile App, not in Salesforce.
+
+It is used in pkb_Template_Wrapped
+
+### ContactPageMobile
+Object Operational Scope:
+* Attachment 
+    * Body 
+    * File Name
+* Case
+    * Description			        Long Text Area
+    * Web Name			            Text
+    * Case Origin Detail			Picklist
+    * Issue Level 1			        Picklist
+    * Issue Level 1 (Chosen by Customer)			Picklist
+    * Param Data			        Text Area
+    * Platform			            Picklist
+    * Product			            Picklist
+    * guid                          Text
+* Contact
+    * Email
+    * Phone
+    * Fitbit account email
+
