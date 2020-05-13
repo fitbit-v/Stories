@@ -34,5 +34,5 @@ S3 Secret access key
 ### Heroku
 * [fitbit-grax-prod](https://dashboard.heroku.com/apps/fitbit-grax-prod/settings)
 
-
+* https://documentation.grax.io/docs/grax-overview
 
